@@ -25,8 +25,10 @@ export function JadwalSampah() {
   const terpilih = jadwalSampah.find((j) => j.rt === rt) ?? jadwalSampah[0];
 
   return (
-    <div className="grid gap-8 lg:grid-cols-[minmax(0,20rem)_1fr] lg:gap-10">
-      <div className="rounded-[var(--radius-panel)] border border-line bg-surface p-6 sm:p-7">
+    /* minmax(0,1fr) di layar kecil: tanpa itu kolom tunggal melebar
+       mengikuti lebar isi baris chip dan konten meluber dari layar. */
+    <div className="grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,20rem)_1fr] lg:gap-10">
+      <div className="min-w-0 rounded-[var(--radius-panel)] border border-line bg-surface p-6 sm:p-7">
         <div className="mb-6 flex items-center gap-3">
           <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-green-soft">
             <TruckIcon size={22} weight="duotone" className="text-green-strong" />
@@ -57,7 +59,7 @@ export function JadwalSampah() {
         </p>
       </div>
 
-      <div aria-live="polite">
+      <div aria-live="polite" className="min-w-0">
         <div className="rounded-[var(--radius-panel)] border border-line bg-surface p-6 sm:p-8">
           <div className="mb-7 flex flex-wrap items-baseline gap-x-3 gap-y-1">
             <h3 className="text-[1.75rem] font-extrabold text-ink">
