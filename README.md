@@ -111,3 +111,7 @@ lain, cukup ganti isi modul-modul itu tanpa menyentuh komponen.
 - `prefers-reduced-motion` dihormati
 - Satu `<h1>` per halaman, `lang="id"`, tautan lompat ke konten
 - Tidak ada emoji sebagai ikon
+
+---
+
+Situs langsung: https://web-desa-lomba.vercel.app
