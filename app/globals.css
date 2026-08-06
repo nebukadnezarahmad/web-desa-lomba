@@ -159,3 +159,38 @@ p {
     transform: none;
   }
 }
+
+/* ---------- Baris pilihan yang menggulir mendatar di layar sempit ---------- */
+
+.baris-gulir {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  /* Wajib: tanpa ini lebar min-content anak yang tidak menyusut
+     ikut membesarkan induk (grid/flex) dan konten meluber dari layar. */
+  min-width: 0;
+  max-width: 100%;
+  /* Menembus padding induk supaya chip terakhir tidak terpotong tepi layar */
+  margin-inline: -1rem;
+  padding-inline: 1rem;
+  scroll-padding-inline: 1rem;
+}
+
+.baris-gulir::-webkit-scrollbar {
+  display: none;
+}
+
+.baris-gulir > * {
+  flex: none;
+}
+
+@media (min-width: 640px) {
+  .baris-gulir {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    margin-inline: 0;
+    padding-inline: 0;
+  }
+}

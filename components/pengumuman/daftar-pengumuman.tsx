@@ -26,7 +26,7 @@ export function DaftarPengumuman() {
       <div
         role="group"
         aria-label="Saring menurut kategori"
-        className="mb-8 flex flex-wrap gap-2"
+        className="baris-gulir mb-8"
       >
         {(["Semua", ...kategoriPengumuman] as Filter[]).map((k) => (
           <button

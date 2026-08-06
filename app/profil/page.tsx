@@ -177,8 +177,57 @@ export default function HalamanProfil() {
           deskripsi={`${formatAngka(totalKk)} kepala keluarga tersebar di 12 RT dan 5 RW.`}
         />
 
-        <div className="overflow-x-auto rounded-[var(--radius-card)] border border-line">
-          <table className="w-full min-w-[36rem] border-collapse text-left">
+        {/* Mobile: kartu per RT — tidak perlu geser samping */}
+        <ul className="flex flex-col gap-2.5 lg:hidden">
+          {daftarRt.map((r) => (
+            <li
+              key={r.rt}
+              className="flex items-center justify-between gap-4 rounded-[var(--radius-card)] border border-line bg-surface p-4"
+            >
+              <div className="min-w-0">
+                <p className="text-[0.9375rem] font-bold text-ink">
+                  {r.rt} <span className="text-ink-faint">/ {r.rw}</span>
+                </p>
+                <p className="mt-0.5 text-[0.8125rem] text-ink-muted">
+                  Dusun {r.dusun}
+                </p>
+              </div>
+              <dl className="flex shrink-0 gap-5 text-right">
+                <div>
+                  <dd className="text-base font-extrabold text-ink">{r.kk}</dd>
+                  <dt className="text-[0.6875rem] text-ink-faint">KK</dt>
+                </div>
+                <div>
+                  <dd className="text-base font-extrabold text-green-strong">
+                    {formatAngka(r.warga)}
+                  </dd>
+                  <dt className="text-[0.6875rem] text-ink-faint">warga</dt>
+                </div>
+              </dl>
+            </li>
+          ))}
+          <li className="flex items-center justify-between gap-4 rounded-[var(--radius-card)] border border-line-strong bg-surface-soft p-4">
+            <p className="text-[0.9375rem] font-extrabold text-ink">Total</p>
+            <dl className="flex shrink-0 gap-5 text-right">
+              <div>
+                <dd className="text-base font-extrabold text-ink">
+                  {formatAngka(totalKk)}
+                </dd>
+                <dt className="text-[0.6875rem] text-ink-faint">KK</dt>
+              </div>
+              <div>
+                <dd className="text-base font-extrabold text-green-strong">
+                  {formatAngka(totalWarga)}
+                </dd>
+                <dt className="text-[0.6875rem] text-ink-faint">warga</dt>
+              </div>
+            </dl>
+          </li>
+        </ul>
+
+        {/* Desktop: tabel penuh */}
+        <div className="hidden overflow-x-auto rounded-[var(--radius-card)] border border-line lg:block">
+          <table className="w-full border-collapse text-left">
             <caption className="sr-only">
               Jumlah kepala keluarga dan warga per RT di {desa.nama}
             </caption>

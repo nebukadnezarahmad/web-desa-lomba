@@ -73,7 +73,7 @@ export function JadwalSampah() {
             <p className="mb-3 text-xs font-bold uppercase tracking-[0.14em] text-green-strong">
               Hari angkut
             </p>
-            <ul className="flex flex-wrap gap-2">
+            <ul className="baris-gulir">
               {semuaHari.map((h) => {
                 const angkut = terpilih.hari.includes(h);
                 return (

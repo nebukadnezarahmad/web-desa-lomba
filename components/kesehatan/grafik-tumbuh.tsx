@@ -14,10 +14,18 @@ import {
 } from "recharts";
 import { kurvaMedianTinggi } from "@/lib/gizi";
 import { contohPertumbuhan } from "@/lib/data/posyandu";
+import { useLayarSempit } from "@/lib/use-layar-sempit";
 import { cn } from "@/lib/utils";
+
+const keterangan = [
+  { label: "Rentang normal", warna: "bg-green/25" },
+  { label: "Median WHO", warna: "bg-green-strong" },
+  { label: "Contoh anak", warna: "bg-blue-strong" },
+];
 
 export function GrafikTumbuh() {
   const [jenisKelamin, setJenisKelamin] = React.useState<"L" | "P">("L");
+  const sempit = useLayarSempit();
 
   const data = React.useMemo(() => {
     const kurva = kurvaMedianTinggi(jenisKelamin);
@@ -64,34 +72,45 @@ export function GrafikTumbuh() {
         ))}
       </div>
 
-      <div className="rounded-[var(--radius-panel)] border border-line bg-surface p-4 sm:p-6">
-        <div className="h-[22rem] w-full">
+      <div className="rounded-[var(--radius-panel)] border border-line bg-surface p-3 sm:p-6">
+        {/* Di layar sempit: legenda diganti keterangan sendiri di bawah,
+            tick dijarangkan, dan margin dirapatkan supaya kurva tidak terjepit. */}
+        <div className="h-[16rem] w-full sm:h-[22rem]">
           <ResponsiveContainer width="100%" height="100%">
             <ComposedChart
               data={data}
-              margin={{ top: 8, right: 8, bottom: 24, left: 0 }}
+              margin={
+                sempit
+                  ? { top: 6, right: 10, bottom: 18, left: 0 }
+                  : { top: 8, right: 8, bottom: 24, left: 0 }
+              }
             >
               <CartesianGrid stroke="var(--line)" vertical={false} />
               <XAxis
                 dataKey="umur"
-                tick={{ fill: "var(--ink-muted)", fontSize: 12 }}
+                tick={{ fill: "var(--ink-muted)", fontSize: sempit ? 10 : 12 }}
                 stroke="var(--line-strong)"
                 tickLine={false}
-                label={{
-                  value: "Usia (bulan)",
-                  position: "insideBottom",
-                  offset: -14,
-                  fill: "var(--ink-muted)",
-                  fontSize: 12,
-                }}
+                ticks={sempit ? [0, 12, 24, 36, 48, 60] : undefined}
+                label={
+                  sempit
+                    ? undefined
+                    : {
+                        value: "Usia (bulan)",
+                        position: "insideBottom",
+                        offset: -14,
+                        fill: "var(--ink-muted)",
+                        fontSize: 12,
+                      }
+                }
               />
               <YAxis
                 domain={[40, 125]}
-                tick={{ fill: "var(--ink-muted)", fontSize: 12 }}
+                tick={{ fill: "var(--ink-muted)", fontSize: sempit ? 10 : 12 }}
                 stroke="var(--line-strong)"
                 tickLine={false}
-                width={56}
-                tickFormatter={(v) => `${v} cm`}
+                width={sempit ? 40 : 56}
+                tickFormatter={(v) => (sempit ? `${v}` : `${v} cm`)}
               />
               <Tooltip
                 contentStyle={{
@@ -107,11 +126,13 @@ export function GrafikTumbuh() {
                   return [`${nilai} cm`, nama];
                 }}
               />
-              <Legend
-                verticalAlign="top"
-                height={40}
-                wrapperStyle={{ fontSize: "0.8125rem" }}
-              />
+              {!sempit && (
+                <Legend
+                  verticalAlign="top"
+                  height={40}
+                  wrapperStyle={{ fontSize: "0.8125rem" }}
+                />
+              )}
 
               <Area
                 dataKey="pitaNormal"
@@ -140,6 +161,28 @@ export function GrafikTumbuh() {
             </ComposedChart>
           </ResponsiveContainer>
         </div>
+
+        {/* Keterangan buatan sendiri di layar sempit — lebih ringkas
+            daripada legenda bawaan yang melipat jadi dua baris. */}
+        {sempit && (
+          <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-2 border-t border-line pt-3">
+            {keterangan.map((k) => (
+              <li
+                key={k.label}
+                className="flex items-center gap-1.5 text-[0.75rem] text-ink-muted"
+              >
+                <span
+                  aria-hidden
+                  className={cn("h-2.5 w-2.5 rounded-full", k.warna)}
+                />
+                {k.label}
+              </li>
+            ))}
+            <li className="w-full text-[0.6875rem] text-ink-faint">
+              Sumbu mendatar: usia dalam bulan · Sumbu tegak: tinggi dalam cm
+            </li>
+          </ul>
+        )}
       </div>
 
       <p className="mt-4 text-[0.8125rem] leading-relaxed text-ink-muted">

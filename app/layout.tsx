@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
+import { BottomNav } from "@/components/layout/bottom-nav";
 import { desa } from "@/lib/data/desa";
 import "./globals.css";
 
@@ -37,6 +38,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
         </main>
         <SiteFooter />
+        {/* Ruang supaya navigasi bawah tidak menutupi akhir halaman */}
+        <div aria-hidden className="h-16 lg:hidden" />
+        <BottomNav />
       </body>
     </html>
   );

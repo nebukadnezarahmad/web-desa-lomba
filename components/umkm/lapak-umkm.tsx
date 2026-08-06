@@ -60,7 +60,7 @@ export function LapakUmkm() {
         <div
           role="group"
           aria-label="Saring menurut kategori"
-          className="flex flex-wrap gap-2"
+          className="baris-gulir"
         >
           {(["Semua", ...kategoriUmkm] as Filter[]).map((k) => (
             <button

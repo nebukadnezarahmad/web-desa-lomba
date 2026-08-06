@@ -31,25 +31,26 @@ export function Hero() {
         className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-surface"
       />
 
-      <div className="relative mx-auto w-full max-w-6xl px-4 pb-20 pt-16 sm:px-6 md:pb-28 md:pt-24 lg:px-8">
-        <div className="grid items-center gap-14 lg:grid-cols-[1.15fr_1fr]">
-          <div>
-            <p className="mb-5 text-xs font-bold uppercase tracking-[0.14em] text-green-strong">
+      <div className="relative mx-auto w-full max-w-6xl px-4 pb-14 pt-10 sm:px-6 sm:pb-20 sm:pt-16 md:pb-28 md:pt-24 lg:px-8">
+        <div className="grid items-center gap-10 sm:gap-14 lg:grid-cols-[1.15fr_1fr]">
+          {/* min-w-0 mencegah kolom grid melebar mengikuti lebar isi */}
+          <div className="min-w-0">
+            <p className="mb-3 text-[0.6875rem] font-bold uppercase tracking-[0.14em] text-green-strong sm:mb-5 sm:text-xs">
               {desa.kecamatan} · {desa.kabupaten}
             </p>
 
-            <h1 className="max-w-2xl text-[2.25rem] font-extrabold text-ink sm:text-[3rem] lg:text-[3.5rem]">
+            <h1 className="max-w-2xl text-[2rem] font-extrabold text-ink sm:text-[3rem] lg:text-[3.5rem]">
               Semua urusan desa,{" "}
               <span className="text-green-strong">satu tempat.</span>
             </h1>
 
-            <p className="mt-6 max-w-xl text-[1.0625rem] leading-relaxed text-ink-muted sm:text-lg">
+            <p className="mt-4 max-w-xl text-[0.9375rem] leading-relaxed text-ink-muted sm:mt-6 sm:text-lg">
               Pengumuman resmi, agenda warga, lapak usaha tetangga, pemantauan
               gizi balita, sampai jadwal angkut sampah RT. {desa.nama} merangkum
               semuanya di halaman yang mudah dibuka siapa saja.
             </p>
 
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-7 flex flex-col gap-2.5 sm:mt-9 sm:flex-row sm:gap-3">
               <Button asChild size="lg">
                 <Link href="/umkm">
                   Jelajahi Lapak UMKM
@@ -61,7 +62,7 @@ export function Hero() {
               </Button>
             </div>
 
-            <ul className="mt-10 flex flex-wrap gap-2">
+            <ul className="baris-gulir mt-7 sm:mt-10">
               {pintasan.map(({ label, href, ikon: Ikon, tone }) => (
                 <li key={href}>
                   <Link
