@@ -7,7 +7,7 @@ import { Section, SectionHeading } from "@/components/shared/section";
 import { Reveal } from "@/components/shared/reveal";
 import { Badge } from "@/components/ui/badge";
 import { agendaMendatang, type Agenda } from "@/lib/data/agenda";
-import { formatTanggalPendek, namaHari } from "@/lib/utils";
+import { cn, formatTanggalPendek, namaHari } from "@/lib/utils";
 
 const toneJenis: Record<Agenda["jenis"], "green" | "blue" | "netral"> = {
   Musyawarah: "blue",
@@ -16,6 +16,9 @@ const toneJenis: Record<Agenda["jenis"], "green" | "blue" | "netral"> = {
   Pelatihan: "blue",
   Budaya: "netral",
 };
+
+/** Sedikit kemiringan berselang-seling, meniru sobekan kalender meja yang tidak pernah sejajar sempurna. */
+const kemiringan = ["-2deg", "1.5deg", "-1deg", "2deg", "-1.5deg", "1deg"];
 
 export function AgendaWarga() {
   return (
@@ -29,14 +32,31 @@ export function AgendaWarga() {
       <ol className="flex flex-col">
         {agendaMendatang.map((a, i) => (
           <Reveal as="li" key={a.judul} index={i}>
-            <div className="group grid gap-4 border-b border-line py-6 transition-colors first:border-t first:border-line sm:grid-cols-[7.5rem_1fr] sm:gap-8">
-              <div className="flex items-baseline gap-2 sm:flex-col sm:gap-0.5">
-                <span className="text-xl font-extrabold tracking-tight text-green-strong">
-                  {formatTanggalPendek(a.tanggal)}
-                </span>
-                <span className="text-[0.8125rem] font-medium text-ink-faint">
-                  {namaHari(a.tanggal)}
-                </span>
+            <div className="group grid grid-cols-[5.5rem_1fr] items-start gap-5 border-b border-line py-7 transition-colors first:border-t first:border-line sm:grid-cols-[6.5rem_1fr] sm:gap-8">
+              {/* Sobekan kalender — motif yang beda sendiri dari kartu di bagian lain halaman */}
+              <div
+                className="relative w-full max-w-[5.5rem] justify-self-center pt-2 sm:max-w-[6.5rem]"
+                style={{ transform: `rotate(${kemiringan[i % kemiringan.length]})` }}
+              >
+                {/* selotip kertas di sudut, kesan "ditempel" */}
+                <span
+                  aria-hidden
+                  className={cn(
+                    "absolute -top-1.5 left-1/2 h-4 w-10 -translate-x-1/2 -rotate-3 rounded-[2px] opacity-70",
+                    i % 2 === 0 ? "bg-green-soft" : "bg-blue-soft",
+                  )}
+                />
+                <div className="tepi-sobek relative bg-surface px-3 pb-4 pt-3 text-center shadow-md shadow-ink/10 ring-1 ring-line">
+                  <p className="text-[0.625rem] font-bold uppercase tracking-[0.12em] text-ink-faint">
+                    {namaHari(a.tanggal).slice(0, 3)}
+                  </p>
+                  <p className="mt-0.5 text-[1.75rem] font-extrabold leading-none tracking-tight text-green-strong sm:text-[2rem]">
+                    {formatTanggalPendek(a.tanggal).split(" ")[0]}
+                  </p>
+                  <p className="mt-0.5 text-[0.6875rem] font-semibold text-ink-muted">
+                    {formatTanggalPendek(a.tanggal).split(" ")[1]}
+                  </p>
+                </div>
               </div>
 
               <div>

@@ -308,7 +308,7 @@ function susunRekomendasi(
 
   if (tbu.tingkat === "buruk" || bbu.tingkat === "buruk") {
     saran.push(
-      "Bawa anak ke Puskesmas Pembantu Tirtomulyo dalam waktu tujuh hari untuk pemeriksaan menyeluruh.",
+      "Bawa anak ke Puskesmas Pembantu Watubelah dalam waktu tujuh hari untuk pemeriksaan menyeluruh.",
     );
   }
 

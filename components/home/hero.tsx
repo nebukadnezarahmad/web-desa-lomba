@@ -40,14 +40,15 @@ export function Hero() {
             </p>
 
             <h1 className="max-w-2xl text-[2rem] font-extrabold text-ink sm:text-[3rem] lg:text-[3.5rem]">
-              Semua urusan desa,{" "}
-              <span className="text-green-strong">satu tempat.</span>
+              Sebelum tanya ke grup WA RT,{" "}
+              <span className="text-green-strong">cek di sini dulu.</span>
             </h1>
 
             <p className="mt-4 max-w-xl text-[0.9375rem] leading-relaxed text-ink-muted sm:mt-6 sm:text-lg">
-              Pengumuman resmi, agenda warga, lapak usaha tetangga, pemantauan
-              gizi balita, sampai jadwal angkut sampah RT. {desa.nama} merangkum
-              semuanya di halaman yang mudah dibuka siapa saja.
+              Jadwal posyandu, sampah diangkut hari apa, ada pengumuman apa
+              minggu ini, sampai keripik tempe Bu Marni masih ada atau tidak —{" "}
+              {desa.nama} kumpulkan semua di satu tempat, tanpa harus scroll
+              chat grup yang isinya kadung bercampur promosi arisan.
             </p>
 
             <div className="mt-7 flex flex-col gap-2.5 sm:mt-9 sm:flex-row sm:gap-3">

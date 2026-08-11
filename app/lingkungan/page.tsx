@@ -20,7 +20,7 @@ import { cn, formatAngka } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Lingkungan & Persampahan",
   description:
-    "Jadwal angkut sampah per RT, panduan memilah sampah rumah tangga, statistik bank sampah, dan program penghijauan Desa Sukamaju.",
+    "Jadwal angkut sampah per RT, panduan memilah sampah rumah tangga, statistik bank sampah, dan program penghijauan Desa Jatirandu.",
 };
 
 const warnaPilah = {

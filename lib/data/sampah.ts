@@ -53,7 +53,7 @@ export const jadwalSampah: JadwalRt[] = [
     dusun: "Sidorejo",
     hari: ["Rabu", "Sabtu"],
     jenis: "Organik dan anorganik terpilah",
-    titikKumpul: "Depan Bengkel Tani Sukamaju",
+    titikKumpul: "Depan Bengkel Tani Jatirandu",
     petugas: "Regu Angkut B",
   },
   {
@@ -186,7 +186,7 @@ export const statistikLingkungan = [
 
 export const programLingkungan = [
   {
-    judul: "Bank Sampah Sukamaju Bersih",
+    judul: "Bank Sampah Jatirandu Bersih",
     deskripsi:
       "Warga menyetor sampah anorganik bersih dan mendapat saldo tabungan yang dapat dicairkan setiap enam bulan atau ditukar sembako.",
     lokasi: "Pos Bank Sampah, belakang balai desa",

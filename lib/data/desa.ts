@@ -1,19 +1,25 @@
 /**
  * Identitas desa — sumber tunggal.
- * Nama desa sengaja fiktif supaya prototipe ini tidak mengarang
- * data atas nama desa yang benar-benar ada. Ganti di sini untuk rebrand.
+ *
+ * Kabupaten memakai nama nyata (Sukoharjo, eks-Karesidenan Surakarta)
+ * supaya konteks geografisnya terasa berpijak, sesuai masukan bahwa nama
+ * karangan generik terasa "buatan AI". Kecamatan dan desa tetap fiktif —
+ * "Watubelah" dan "Jatirandu" bukan nama kecamatan/desa yang benar-benar
+ * terdaftar di Sukoharjo — supaya prototipe ini tidak menempelkan struktur
+ * pemerintahan dan data karangan ke desa yang sungguhan ada. Ganti di sini
+ * untuk rebrand.
  */
 export const desa = {
   merek: "Balai",
   tagline: "Satu pintu untuk warga desa.",
-  nama: "Desa Sukamaju",
-  kecamatan: "Kecamatan Tirtomulyo",
-  kabupaten: "Kabupaten Wijayakusuma",
+  nama: "Desa Jatirandu",
+  kecamatan: "Kecamatan Watubelah",
+  kabupaten: "Kabupaten Sukoharjo",
   provinsi: "Jawa Tengah",
-  kodePos: "54281",
-  alamatBalai: "Jl. Raya Sukamaju No. 1, Dusun Krajan",
-  telepon: "(0286) 555 1240",
-  email: "balaidesa@sukamaju.desa.id",
+  kodePos: "57557",
+  alamatBalai: "Jl. Raya Jatirandu No. 1, Dusun Krajan",
+  telepon: "(0271) 555 1240",
+  email: "balaidesa@jatirandu.desa.id",
   jamLayanan: "Senin–Jumat, 08.00–15.00 WIB",
   luasWilayah: "412 hektar",
   jumlahDusun: 5,

@@ -23,7 +23,7 @@ export const pengumuman: Pengumuman[] = [
     ringkasan:
       "Warga yang mengalami perubahan anggota keluarga sepanjang 2025–2026 diminta memperbarui data di balai desa sebelum 30 September.",
     isi: [
-      "Pemerintah Desa Sukamaju membuka pemutakhiran data Kartu Keluarga tahap II mulai 10 Agustus hingga 30 September 2026. Kegiatan ini menyasar keluarga yang mengalami perubahan susunan anggota sepanjang 2025 sampai pertengahan 2026, baik karena kelahiran, kematian, perkawinan, maupun perpindahan tempat tinggal.",
+      "Pemerintah Desa Jatirandu membuka pemutakhiran data Kartu Keluarga tahap II mulai 10 Agustus hingga 30 September 2026. Kegiatan ini menyasar keluarga yang mengalami perubahan susunan anggota sepanjang 2025 sampai pertengahan 2026, baik karena kelahiran, kematian, perkawinan, maupun perpindahan tempat tinggal.",
       "Data yang mutakhir menentukan ketepatan penyaluran bantuan sosial, penentuan sasaran program kesehatan, dan perhitungan kebutuhan layanan dasar di tiap dusun. Selisih data yang dibiarkan menumpuk membuat sejumlah keluarga terlewat dari program yang seharusnya mereka terima.",
       "Warga cukup membawa Kartu Keluarga asli, KTP kepala keluarga, dan dokumen pendukung perubahan seperti akta kelahiran, akta kematian, buku nikah, atau surat pindah. Petugas melayani di ruang pelayanan balai desa pada hari kerja pukul 08.00 sampai 15.00 WIB.",
       "Bagi warga lanjut usia atau yang memiliki keterbatasan mobilitas, kader RT dapat mengajukan layanan jemput berkas. Sampaikan permintaan tersebut kepada ketua RT masing-masing paling lambat satu minggu sebelum batas akhir.",
@@ -39,7 +39,7 @@ export const pengumuman: Pengumuman[] = [
     ringkasan:
       "Enam posyandu beroperasi bergilir sepanjang Agustus. Pengukuran tinggi dan berat badan balita dilakukan di setiap sesi.",
     isi: [
-      "Seluruh posyandu di Desa Sukamaju kembali beroperasi penuh sepanjang Agustus 2026 dengan jadwal bergilir per dusun. Setiap sesi mencakup penimbangan berat badan, pengukuran panjang atau tinggi badan, pemeriksaan tekanan darah untuk lansia, serta konsultasi gizi bersama bidan desa.",
+      "Seluruh posyandu di Desa Jatirandu kembali beroperasi penuh sepanjang Agustus 2026 dengan jadwal bergilir per dusun. Setiap sesi mencakup penimbangan berat badan, pengukuran panjang atau tinggi badan, pemeriksaan tekanan darah untuk lansia, serta konsultasi gizi bersama bidan desa.",
       "Pengukuran tinggi badan balita menjadi perhatian khusus tahun ini. Hasil pengukuran dipakai untuk menghitung status gizi berdasarkan standar pertumbuhan anak WHO, sehingga kasus perawakan pendek dapat dikenali sejak dini dan ditangani sebelum melewati usia dua tahun.",
       "Orang tua diminta membawa buku Kesehatan Ibu dan Anak setiap kali datang. Bagi balita yang belum pernah tercatat, pendaftaran dapat dilakukan langsung di lokasi tanpa biaya.",
     ],

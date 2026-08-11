@@ -11,6 +11,7 @@ import { Section, SectionHeading } from "@/components/shared/section";
 import { Reveal } from "@/components/shared/reveal";
 import { Badge } from "@/components/ui/badge";
 import { LayananAkordeon } from "@/components/profil/layanan-akordeon";
+import { FotoDesa } from "@/components/shared/foto-desa";
 import { desa, daftarRt } from "@/lib/data/desa";
 import { perangkatDesa, visiMisi, sejarahDesa } from "@/lib/data/profil";
 import { formatAngka } from "@/lib/utils";
@@ -18,7 +19,7 @@ import { formatAngka } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Profil Desa & Layanan",
   description:
-    "Sejarah, visi misi, struktur perangkat, data RT/RW, dan layanan administrasi Desa Sukamaju beserta syarat dan estimasi waktunya.",
+    "Sejarah, visi misi, struktur perangkat, data RT/RW, dan layanan administrasi Desa Jatirandu beserta syarat dan estimasi waktunya.",
 };
 
 const totalKk = daftarRt.reduce((n, r) => n + r.kk, 0);
@@ -46,7 +47,7 @@ export default function HalamanProfil() {
 
       {/* Sejarah */}
       <Section latar="putih">
-        <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:gap-16">
+        <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div>
             <p className="mb-3 text-xs font-bold uppercase tracking-[0.14em] text-blue-strong">
               Riwayat
@@ -54,6 +55,11 @@ export default function HalamanProfil() {
             <h2 className="text-[1.75rem] font-extrabold text-ink sm:text-[2.125rem]">
               Bagaimana desa ini terbentuk
             </h2>
+            <FotoDesa
+              alt="Gapura masuk Desa Jatirandu"
+              rasio="potret"
+              className="mt-6 rounded-[var(--radius-card)]"
+            />
           </div>
           <div className="flex flex-col gap-5">
             {sejarahDesa.map((p, i) => (
@@ -315,7 +321,7 @@ export default function HalamanProfil() {
         <SectionHeading
           kicker="Hubungi Kami"
           tone="blue"
-          judul="Balai Desa Sukamaju"
+          judul="Balai Desa Jatirandu"
           deskripsi="Datang langsung pada hari kerja, atau hubungi lebih dulu bila ingin memastikan berkas."
         />
 

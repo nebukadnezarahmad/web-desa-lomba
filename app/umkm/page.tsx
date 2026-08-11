@@ -6,7 +6,7 @@ import { LapakUmkm } from "@/components/umkm/lapak-umkm";
 export const metadata: Metadata = {
   title: "Lapak UMKM Warga",
   description:
-    "Produk buatan warga Desa Sukamaju: makanan olahan, kerajinan, hasil pertanian, dan jasa. Hubungi langsung pemiliknya tanpa perantara.",
+    "Produk buatan warga Desa Jatirandu: makanan olahan, kerajinan, hasil pertanian, dan jasa. Hubungi langsung pemiliknya tanpa perantara.",
 };
 
 export default function HalamanUmkm() {
@@ -15,7 +15,7 @@ export default function HalamanUmkm() {
       <PageHeader
         kicker="Ekonomi Warga"
         judul="Lapak UMKM warga desa"
-        deskripsi="Semua yang tampil di sini dibuat atau dikerjakan sendiri oleh warga Desa Sukamaju. Pilih produknya, hubungi langsung pemiliknya lewat WhatsApp, tanpa perantara dan tanpa potongan."
+        deskripsi="Semua yang tampil di sini dibuat atau dikerjakan sendiri oleh warga Desa Jatirandu. Pilih produknya, hubungi langsung pemiliknya lewat WhatsApp, tanpa perantara dan tanpa potongan."
       />
       <Section latar="putih">
         <LapakUmkm />

@@ -24,7 +24,7 @@ export const produkUmkm: Produk[] = [
     harga: 18000,
     satuan: "bungkus 250 g",
     deskripsi:
-      "Keripik tempe tipis digoreng dengan bumbu ketumbar dan daun jeruk, renyah tanpa pengawet.",
+      "Keripik tempe renyah, bumbu ketumbar dan daun jeruk. Tanpa pengawet.",
     detail: [
       "Dibuat dari tempe kedelai yang difermentasi sendiri selama dua hari, lalu diiris tipis dan dibalut adonan tepung beras berbumbu ketumbar, bawang putih, dan daun jeruk.",
       "Digoreng dua kali agar kadar minyak berkurang dan tekstur tetap renyah sampai dua minggu setelah pengemasan.",
@@ -44,7 +44,7 @@ export const produkUmkm: Produk[] = [
     harga: 32000,
     satuan: "toples 500 g",
     deskripsi:
-      "Gula aren kristal tanpa campuran gula pasir, disadap dari pohon aren di lereng timur desa.",
+      "Gula aren kristal murni, disadap sendiri dari pohon aren di lereng timur desa — tanpa campuran gula pasir sama sekali, warna dan aromanya asli dari nira.",
     detail: [
       "Nira aren disadap setiap pagi dan sore, lalu dimasak hari itu juga tanpa jeda agar tidak berubah asam. Proses pengkristalan dilakukan manual dengan pengadukan tangan.",
       "Tidak menggunakan campuran gula pasir maupun pemutih. Warna cokelat pekat dan aroma karamel yang kuat berasal murni dari nira.",
@@ -63,8 +63,7 @@ export const produkUmkm: Produk[] = [
     kategori: "Kerajinan",
     harga: 65000,
     satuan: "buah",
-    deskripsi:
-      "Keranjang bambu anyaman rapat untuk penyimpanan dapur atau wadah hantaran, tersedia tiga ukuran.",
+    deskripsi: "Keranjang bambu, tiga ukuran.",
     detail: [
       "Menggunakan bambu apus berumur tiga tahun yang direndam dua minggu agar tahan rayap, kemudian dijemur dan dianyam tangan dengan pola anyaman rapat.",
       "Tersedia ukuran kecil, sedang, dan besar. Bagian bibir keranjang diperkuat rotan agar tidak mudah melengkung saat dipakai membawa beban.",
@@ -78,14 +77,14 @@ export const produkUmkm: Produk[] = [
   },
   {
     slug: "batik-tulis-motif-padi",
-    nama: "Batik Tulis Motif Padi Sukamaju",
+    nama: "Batik Tulis Motif Padi Jatirandu",
     kategori: "Kerajinan",
     harga: 285000,
     satuan: "lembar 2 m",
     deskripsi:
-      "Kain batik tulis dengan motif bulir padi dan garis kontur sawah, dikerjakan penuh dengan canting tangan.",
+      "Batik tulis motif bulir padi dan garis kontur sawah, dikerjakan penuh dengan canting tangan oleh kelompok perajin ibu-ibu desa — bukan cap, bukan printing, satu lembar butuh sekitar sepuluh hari kerja.",
     detail: [
-      "Motif dikembangkan kelompok perajin desa dengan mengambil bentuk bulir padi dan garis kontur persawahan sebagai penanda identitas Sukamaju.",
+      "Motif dikembangkan kelompok perajin desa dengan mengambil bentuk bulir padi dan garis kontur persawahan sebagai penanda identitas Jatirandu.",
       "Seluruh proses dikerjakan dengan canting tangan di atas kain katun primisima, membutuhkan waktu sekitar sepuluh hari per lembar.",
       "Pewarnaan menggunakan kombinasi pewarna alam dari kulit mahoni dan indigo. Setiap lembar memiliki perbedaan kecil karena dikerjakan manual.",
     ],
@@ -102,8 +101,7 @@ export const produkUmkm: Produk[] = [
     kategori: "Pertanian",
     harga: 24000,
     satuan: "kg",
-    deskripsi:
-      "Beras merah dari sawah tadah hujan yang dikelola tanpa pupuk kimia sejak 2021.",
+    deskripsi: "Beras merah, tanpa pupuk kimia sejak 2021.",
     detail: [
       "Ditanam di lahan seluas dua hektar di Dusun Tegalsari yang telah dikelola tanpa pupuk dan pestisida kimia selama lima musim tanam berturut-turut.",
       "Penggilingan dilakukan setelah ada pesanan agar kandungan minyak pada lapisan bekatul tidak cepat tengik.",
@@ -122,7 +120,7 @@ export const produkUmkm: Produk[] = [
     harga: 145000,
     satuan: "botol 250 ml",
     deskripsi:
-      "Madu lebah klanceng dari sarang budi daya di kebun campur, rasa asam manis khas.",
+      "Madu klanceng dari kebun campur, rasa asam manis khas, dipanen tanpa merusak sarang.",
     detail: [
       "Dipanen dari koloni lebah tanpa sengat jenis klanceng yang dibudidayakan di kebun campur berisi kelapa, kopi, dan tanaman berbunga liar.",
       "Panen dilakukan tiga hingga empat bulan sekali dengan menyedot langsung dari kantong madu, tanpa pemerasan sarang, sehingga koloni tetap utuh.",
@@ -141,14 +139,14 @@ export const produkUmkm: Produk[] = [
     harga: 75000,
     satuan: "kunjungan",
     deskripsi:
-      "Perbaikan dan perawatan traktor tangan, pompa air, dan mesin perontok padi, dilayani di lokasi.",
+      "Servis traktor tangan, pompa air, dan mesin perontok padi — teknisi datang langsung ke rumah, termasuk panggilan darurat saat musim tanam dan panen sedang ramai-ramainya.",
     detail: [
       "Melayani perbaikan traktor tangan, pompa air, mesin perontok padi, dan mesin pemotong rumput. Teknisi datang ke lokasi di seluruh wilayah desa.",
       "Tarif kunjungan sudah termasuk pemeriksaan menyeluruh dan penyetelan ringan. Biaya suku cadang dihitung terpisah dan disampaikan sebelum penggantian.",
       "Menerima panggilan darurat di masa tanam dan panen. Hubungi lewat WhatsApp untuk memastikan ketersediaan jadwal.",
     ],
     pemilik: "Agus Setiawan",
-    usaha: "Bengkel Tani Sukamaju",
+    usaha: "Bengkel Tani Jatirandu",
     rt: "RT 06",
     dusun: "Sidorejo",
     whatsapp: "081234567807",
@@ -159,8 +157,7 @@ export const produkUmkm: Produk[] = [
     kategori: "Jasa",
     harga: 25000,
     satuan: "potong",
-    deskripsi:
-      "Jahit baju, seragam sekolah, dan permak ukuran. Selesai dua sampai empat hari kerja.",
+    deskripsi: "Jahit & permak, 2–4 hari kerja.",
     detail: [
       "Melayani jahit baju harian, seragam sekolah, kebaya, serta permak ukuran seperti pengecilan pinggang, pemendekan lengan, dan penggantian resleting.",
       "Waktu pengerjaan dua sampai empat hari kerja tergantung antrean. Musim ajaran baru biasanya lebih padat, disarankan memesan lebih awal.",
@@ -179,7 +176,7 @@ export const produkUmkm: Produk[] = [
     harga: 15000,
     satuan: "bungkus 200 g",
     deskripsi:
-      "Peyek tipis dengan taburan kacang tanah atau udang rebon, digoreng setiap hari.",
+      "Peyek kacang atau rebon, digoreng tipis setiap hari, tidak pernah nginep.",
     detail: [
       "Adonan tepung beras dicampur santan dan bumbu kemiri, digoreng tipis sehingga renyah tanpa terasa berminyak.",
       "Tersedia varian kacang tanah dan udang rebon. Digoreng setiap hari sehingga selalu dikirim dalam keadaan baru.",
@@ -197,8 +194,7 @@ export const produkUmkm: Produk[] = [
     kategori: "Kerajinan",
     harga: 45000,
     satuan: "buah",
-    deskripsi:
-      "Sapu dari serat ijuk aren dengan gagang kayu, tahan dipakai bertahun-tahun.",
+    deskripsi: "Sapu ijuk, awet bertahun-tahun.",
     detail: [
       "Serat ijuk diambil dari pohon aren yang sama dengan penyadapan nira, sehingga tidak ada bagian pohon yang terbuang.",
       "Ikatan menggunakan kawat berlapis dan tali ijuk berlapis ganda agar tidak mudah lepas saat dipakai menyapu halaman berbatu.",
@@ -217,7 +213,7 @@ export const produkUmkm: Produk[] = [
     harga: 38000,
     satuan: "bungkus 250 g",
     deskripsi:
-      "Robusta dari kebun lereng desa, disangrai sedang dan digiling setelah pesanan masuk.",
+      "Robusta petik merah dari lereng desa, dijemur dua minggu, baru digiling setelah pesanan masuk supaya aromanya tidak keburu hilang.",
     detail: [
       "Buah kopi dipetik merah dari kebun di lereng Dusun Banjaran pada ketinggian sekitar 600 meter, lalu diolah kering di bawah sinar matahari selama dua minggu.",
       "Disangrai dengan tingkat sedang untuk menahan rasa cokelat dan mengurangi rasa gosong, kemudian digiling setelah pesanan masuk.",
@@ -235,8 +231,7 @@ export const produkUmkm: Produk[] = [
     kategori: "Jasa",
     harga: 22000,
     satuan: "porsi",
-    deskripsi:
-      "Nasi kotak dan prasmanan untuk hajatan, rapat desa, dan pengajian. Minimal 30 porsi.",
+    deskripsi: "Nasi kotak & prasmanan, minimal 30 porsi.",
     detail: [
       "Menyediakan nasi kotak dan prasmanan dengan menu masakan rumahan seperti ayam bakar, gudeg, sayur lodeh, dan urap, disesuaikan permintaan.",
       "Pesanan minimal 30 porsi dengan pemberitahuan paling lambat dua hari sebelum acara. Untuk hajatan besar di atas 200 porsi disarankan memesan satu minggu sebelumnya.",

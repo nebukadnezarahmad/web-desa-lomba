@@ -114,7 +114,7 @@ export default async function HalamanProduk(props: PageProps<"/umkm/[slug]">) {
               <a
                 href={tautanWhatsApp(
                   produk.whatsapp,
-                  `Halo ${produk.pemilik}, saya melihat ${produk.nama} di lapak UMKM Desa Sukamaju. Apakah masih tersedia?`,
+                  `Halo ${produk.pemilik}, saya melihat ${produk.nama} di lapak UMKM Desa Jatirandu. Apakah masih tersedia?`,
                 )}
                 target="_blank"
                 rel="noopener noreferrer"
