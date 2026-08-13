@@ -49,6 +49,7 @@ export const daftarRt = [
 
 export const navigasi = [
   { label: "Beranda", href: "/" },
+  { label: "Lapor", href: "/lapor" },
   { label: "UMKM", href: "/umkm" },
   { label: "Kesehatan", href: "/kesehatan" },
   { label: "Lingkungan", href: "/lingkungan" },

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   HouseIcon,
+  MegaphoneIcon,
   StorefrontIcon,
   HeartbeatIcon,
   RecycleIcon,
@@ -18,6 +19,7 @@ import { cn } from "@/lib/utils";
  */
 const tab = [
   { label: "Beranda", href: "/", ikon: HouseIcon },
+  { label: "Lapor", href: "/lapor", ikon: MegaphoneIcon },
   { label: "UMKM", href: "/umkm", ikon: StorefrontIcon },
   { label: "Kesehatan", href: "/kesehatan", ikon: HeartbeatIcon },
   { label: "Lingkungan", href: "/lingkungan", ikon: RecycleIcon },
@@ -36,7 +38,7 @@ export function BottomNav() {
       className="fixed inset-x-0 bottom-0 z-50 border-t border-line bg-surface/95 backdrop-blur-md lg:hidden"
       style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
     >
-      <ul className="mx-auto grid max-w-lg grid-cols-5">
+      <ul className="mx-auto grid max-w-lg grid-cols-6">
         {tab.map(({ label, href, ikon: Ikon }) => {
           const ini = aktif(href);
           return (
