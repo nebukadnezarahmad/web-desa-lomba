@@ -6,6 +6,7 @@ import {
   FileTextIcon,
   ArrowUpRightIcon,
   RulerIcon,
+  MegaphoneIcon,
 } from "@phosphor-icons/react/dist/ssr";
 import { Section, SectionHeading } from "@/components/shared/section";
 import { Reveal } from "@/components/shared/reveal";
@@ -47,13 +48,22 @@ const kartu = [
     span: "",
   },
   {
+    href: "/lapor",
+    judul: "Lapor Warga",
+    deskripsi:
+      "Jalan rusak, sampah menumpuk, atau masalah lain di lingkungan? Laporkan di sini, lacak tindak lanjutnya pakai kode yang dikirim otomatis.",
+    ikon: MegaphoneIcon,
+    tone: "blue" as const,
+    span: "sm:col-span-2",
+  },
+  {
     href: "/profil#layanan",
     judul: "Layanan Administrasi",
     deskripsi:
       "Enam jenis surat dengan syarat, alur, dan estimasi waktu yang jelas. Semuanya tanpa pungutan.",
     ikon: FileTextIcon,
     tone: "blue" as const,
-    span: "sm:col-span-4",
+    span: "sm:col-span-2",
   },
 ];
 
@@ -70,7 +80,7 @@ export function BentoLayanan() {
       <SectionHeading
         kicker="Layanan Inti"
         judul="Yang bisa warga kerjakan di sini"
-        deskripsi="Empat urusan yang paling sering ditanyakan warga, dibuat bisa diselesaikan sendiri tanpa harus datang ke balai desa dulu."
+        deskripsi="Urusan yang paling sering ditanyakan warga, dibuat bisa diselesaikan sendiri tanpa harus datang ke balai desa dulu."
       />
 
       <div className="grid auto-rows-[minmax(11rem,auto)] grid-flow-dense gap-4 sm:grid-cols-4">
