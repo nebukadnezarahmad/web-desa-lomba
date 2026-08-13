@@ -20,7 +20,8 @@ export const metadata: Metadata = {
   description: "Masukkan kode lacak untuk melihat status tindak lanjut laporan Anda.",
 };
 
-const gayaStatus: Record<StatusLaporan, { label: string; tone: "green" | "blue" | "warn" | "danger" }> = {
+const gayaStatus: Record<StatusLaporan, { label: string; tone: "green" | "blue" | "warn" | "danger" | "netral" }> = {
+  menunggu: { label: "Menunggu Ditinjau", tone: "netral" },
   diterima: { label: "Diterima", tone: "blue" },
   diproses: { label: "Sedang Diproses", tone: "warn" },
   selesai: { label: "Selesai", tone: "green" },

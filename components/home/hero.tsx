@@ -1,7 +1,7 @@
 import Link from "next/link";
 import {
   ArrowRightIcon,
-  StorefrontIcon,
+  ClipboardTextIcon,
   HeartbeatIcon,
   RecycleIcon,
   MegaphoneIcon,
@@ -11,7 +11,12 @@ import { desa, statistikDesa } from "@/lib/data/desa";
 import { formatAngka } from "@/lib/utils";
 
 const pintasan = [
-  { label: "Lapak UMKM", href: "/umkm", ikon: StorefrontIcon, tone: "green" },
+  {
+    label: "Lihat Laporan",
+    href: "/lapor/daftar",
+    ikon: ClipboardTextIcon,
+    tone: "blue",
+  },
   { label: "Kesehatan", href: "/kesehatan", ikon: HeartbeatIcon, tone: "green" },
   { label: "Lingkungan", href: "/lingkungan", ikon: RecycleIcon, tone: "green" },
   {
@@ -53,8 +58,8 @@ export function Hero() {
 
             <div className="mt-7 flex flex-col gap-2.5 sm:mt-9 sm:flex-row sm:gap-3">
               <Button asChild size="lg">
-                <Link href="/umkm">
-                  Jelajahi Lapak UMKM
+                <Link href="/lapor">
+                  Lapor Sekarang
                   <ArrowRightIcon size={19} weight="bold" />
                 </Link>
               </Button>

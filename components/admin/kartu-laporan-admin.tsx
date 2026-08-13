@@ -7,6 +7,7 @@ import {
   UserIcon,
   PhoneIcon,
   FloppyDiskIcon,
+  TrashIcon,
 } from "@phosphor-icons/react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -18,19 +19,21 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { ubahStatusLaporan } from "@/app/admin/laporan/actions";
+import { ubahStatusLaporan, hapusLaporan } from "@/app/admin/laporan/actions";
 import { formatTanggal } from "@/lib/utils";
 import type { Laporan, StatusLaporan } from "@/lib/lapor/types";
 import { daftarStatusLaporan } from "@/lib/lapor/types";
 
 const labelStatus: Record<StatusLaporan, string> = {
+  menunggu: "Menunggu Tinjauan",
   diterima: "Diterima",
   diproses: "Sedang Diproses",
   selesai: "Selesai",
   ditolak: "Ditolak",
 };
 
-const toneStatus: Record<StatusLaporan, "blue" | "warn" | "green" | "danger"> = {
+const toneStatus: Record<StatusLaporan, "blue" | "warn" | "green" | "danger" | "netral"> = {
+  menunggu: "netral",
   diterima: "blue",
   diproses: "warn",
   selesai: "green",
@@ -39,6 +42,8 @@ const toneStatus: Record<StatusLaporan, "blue" | "warn" | "green" | "danger"> = 
 
 export function KartuLaporanAdmin({ laporan }: { laporan: Laporan }) {
   const [hasil, kirim, mengirim] = useActionState(ubahStatusLaporan, null);
+  const [hasilHapus, kirimHapus, menghapus] = useActionState(hapusLaporan, null);
+  const [konfirmHapus, setKonfirmHapus] = useState(false);
 
   // Status & catatan dikontrol manual (bukan defaultValue) supaya tampilan
   // ikut memperbarui diri setelah simpan berhasil — React mereset field
@@ -142,6 +147,40 @@ export function KartuLaporanAdmin({ laporan }: { laporan: Laporan }) {
           )}
         </div>
       </form>
+
+      <div className="mt-5 border-t border-line pt-5">
+        {konfirmHapus ? (
+          <form action={kirimHapus} className="flex flex-wrap items-center gap-3">
+            <input type="hidden" name="id" value={laporan.id} />
+            <span className="text-sm text-danger">
+              Hapus permanen laporan ini? Tidak bisa dibatalkan.
+            </span>
+            <Button type="submit" variant="outline" size="sm" disabled={menghapus} className="border-danger/40 text-danger hover:border-danger hover:text-danger">
+              {menghapus ? "Menghapus…" : "Ya, hapus"}
+            </Button>
+            <Button
+              type="button"
+              variant="ghost"
+              size="sm"
+              onClick={() => setKonfirmHapus(false)}
+            >
+              Batal
+            </Button>
+          </form>
+        ) : (
+          <button
+            type="button"
+            onClick={() => setKonfirmHapus(true)}
+            className="flex items-center gap-1.5 text-sm font-semibold text-ink-faint transition-colors hover:text-danger"
+          >
+            <TrashIcon size={16} weight="bold" />
+            Hapus laporan
+          </button>
+        )}
+        {hasilHapus && !hasilHapus.berhasil && (
+          <p className="mt-2 text-sm text-danger">{hasilHapus.pesan}</p>
+        )}
+      </div>
     </div>
   );
 }

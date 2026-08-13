@@ -35,6 +35,7 @@ export default async function HalamanAdminLaporan(
   const semuaLaporan = (data ?? []) as Laporan[];
   const jumlah = {
     semua: semuaLaporan.length,
+    menunggu: 0,
     diterima: 0,
     diproses: 0,
     selesai: 0,

@@ -4,7 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   HouseIcon,
-  MegaphoneIcon,
   StorefrontIcon,
   HeartbeatIcon,
   RecycleIcon,
@@ -17,16 +16,15 @@ import { cn } from "@/lib/utils";
  * satu ketukan ibu jari, tanpa membuka menu dulu. Di layar besar
  * digantikan navigasi atas pada SiteHeader.
  *
- * Label sengaja diperpendek dari nama halaman resminya (beda dengan
- * navigasi desktop) — enam tujuan di lebar layar HP hanya muat kalau
- * labelnya singkat, kalau tidak akan terpotong atau terasa sesak.
+ * Sengaja tetap 5 tujuan inti (bukan menambahkan Lapor di sini) —
+ * di lebar layar HP, enam tujuan terasa sesak. Lapor tetap mudah
+ * dijangkau lewat CTA utama di beranda dan menu atas versi desktop.
  */
 const tab = [
   { label: "Beranda", href: "/", ikon: HouseIcon },
-  { label: "Lapor", href: "/lapor", ikon: MegaphoneIcon },
   { label: "UMKM", href: "/umkm", ikon: StorefrontIcon },
-  { label: "Sehat", href: "/kesehatan", ikon: HeartbeatIcon },
-  { label: "Alam", href: "/lingkungan", ikon: RecycleIcon },
+  { label: "Kesehatan", href: "/kesehatan", ikon: HeartbeatIcon },
+  { label: "Lingkungan", href: "/lingkungan", ikon: RecycleIcon },
   { label: "Profil", href: "/profil", ikon: BuildingsIcon },
 ] as const;
 
@@ -42,7 +40,7 @@ export function BottomNav() {
       className="fixed inset-x-0 bottom-0 z-50 border-t border-line bg-surface/95 backdrop-blur-md lg:hidden"
       style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
     >
-      <ul className="mx-auto grid max-w-lg grid-cols-6">
+      <ul className="mx-auto grid max-w-lg grid-cols-5">
         {tab.map(({ label, href, ikon: Ikon }) => {
           const ini = aktif(href);
           return (
@@ -53,17 +51,17 @@ export function BottomNav() {
                 href={href}
                 aria-current={ini ? "page" : undefined}
                 className={cn(
-                  "flex h-16 w-full flex-col items-center justify-center gap-1 transition-colors",
+                  "flex h-16 w-full flex-col items-center justify-center gap-1 px-0.5 transition-colors",
                   ini ? "text-green-strong" : "text-ink-faint",
                 )}
               >
                 <span
                   className={cn(
-                    "flex h-8 w-10 items-center justify-center rounded-full transition-colors",
+                    "flex h-8 w-12 items-center justify-center rounded-full transition-colors",
                     ini && "bg-green-soft",
                   )}
                 >
-                  <Ikon size={20} weight={ini ? "fill" : "regular"} />
+                  <Ikon size={21} weight={ini ? "fill" : "regular"} />
                 </span>
                 <span
                   className={cn(

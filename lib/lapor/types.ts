@@ -5,7 +5,12 @@ export type KategoriLaporan =
   | "Kesehatan"
   | "Lainnya";
 
-export type StatusLaporan = "diterima" | "diproses" | "selesai" | "ditolak";
+export type StatusLaporan =
+  | "menunggu"
+  | "diterima"
+  | "diproses"
+  | "selesai"
+  | "ditolak";
 
 export const daftarKategoriLaporan: KategoriLaporan[] = [
   "Jalan & Infrastruktur",
@@ -16,6 +21,7 @@ export const daftarKategoriLaporan: KategoriLaporan[] = [
 ];
 
 export const daftarStatusLaporan: StatusLaporan[] = [
+  "menunggu",
   "diterima",
   "diproses",
   "selesai",
@@ -37,7 +43,8 @@ export type Laporan = {
   updated_at: string;
 };
 
-/** Bentuk baris hasil dari fungsi cek_status_laporan — sengaja tidak menyertakan nama_pelapor/kontak. */
+/** Bentuk baris hasil dari fungsi cek_status_laporan & daftar_laporan_publik —
+ * sengaja tidak menyertakan nama_pelapor/kontak/kode_lacak. */
 export type StatusLaporanPublik = Pick<
   Laporan,
   | "kategori"

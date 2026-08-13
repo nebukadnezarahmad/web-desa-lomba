@@ -4,6 +4,7 @@ import { daftarStatusLaporan } from "@/lib/lapor/types";
 import type { StatusLaporan } from "@/lib/lapor/types";
 
 const labelStatus: Record<StatusLaporan, string> = {
+  menunggu: "Menunggu",
   diterima: "Diterima",
   diproses: "Diproses",
   selesai: "Selesai",

@@ -56,3 +56,34 @@ export async function ubahStatusLaporan(
   revalidatePath("/admin/laporan");
   return { berhasil: true, pesan: "Tersimpan." };
 }
+
+const SkemaHapus = z.object({ id: z.string().uuid() });
+
+export type HasilHapus = { berhasil: boolean; pesan: string } | null;
+
+export async function hapusLaporan(
+  _sebelumnya: HasilHapus,
+  formData: FormData,
+): Promise<HasilHapus> {
+  if (!(await sesiAdminValid())) {
+    return { berhasil: false, pesan: "Sesi berakhir. Masuk kembali." };
+  }
+
+  const parsed = SkemaHapus.safeParse({ id: formData.get("id") });
+  if (!parsed.success) {
+    return { berhasil: false, pesan: "Data tidak valid." };
+  }
+
+  const supabase = klienService();
+  const { error } = await supabase
+    .from("laporan_warga")
+    .delete()
+    .eq("id", parsed.data.id);
+
+  if (error) {
+    return { berhasil: false, pesan: "Gagal menghapus. Coba lagi." };
+  }
+
+  revalidatePath("/admin/laporan");
+  return { berhasil: true, pesan: "Laporan dihapus." };
+}
