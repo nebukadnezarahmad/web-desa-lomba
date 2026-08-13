@@ -16,13 +16,17 @@ import { cn } from "@/lib/utils";
  * Navigasi bawah khusus layar kecil. Semua tujuan utama terjangkau
  * satu ketukan ibu jari, tanpa membuka menu dulu. Di layar besar
  * digantikan navigasi atas pada SiteHeader.
+ *
+ * Label sengaja diperpendek dari nama halaman resminya (beda dengan
+ * navigasi desktop) — enam tujuan di lebar layar HP hanya muat kalau
+ * labelnya singkat, kalau tidak akan terpotong atau terasa sesak.
  */
 const tab = [
   { label: "Beranda", href: "/", ikon: HouseIcon },
   { label: "Lapor", href: "/lapor", ikon: MegaphoneIcon },
   { label: "UMKM", href: "/umkm", ikon: StorefrontIcon },
-  { label: "Kesehatan", href: "/kesehatan", ikon: HeartbeatIcon },
-  { label: "Lingkungan", href: "/lingkungan", ikon: RecycleIcon },
+  { label: "Sehat", href: "/kesehatan", ikon: HeartbeatIcon },
+  { label: "Alam", href: "/lingkungan", ikon: RecycleIcon },
   { label: "Profil", href: "/profil", ikon: BuildingsIcon },
 ] as const;
 
@@ -49,17 +53,17 @@ export function BottomNav() {
                 href={href}
                 aria-current={ini ? "page" : undefined}
                 className={cn(
-                  "flex h-16 w-full flex-col items-center justify-center gap-1 px-0.5 transition-colors",
+                  "flex h-16 w-full flex-col items-center justify-center gap-1 transition-colors",
                   ini ? "text-green-strong" : "text-ink-faint",
                 )}
               >
                 <span
                   className={cn(
-                    "flex h-8 w-12 items-center justify-center rounded-full transition-colors",
+                    "flex h-8 w-10 items-center justify-center rounded-full transition-colors",
                     ini && "bg-green-soft",
                   )}
                 >
-                  <Ikon size={21} weight={ini ? "fill" : "regular"} />
+                  <Ikon size={20} weight={ini ? "fill" : "regular"} />
                 </span>
                 <span
                   className={cn(
