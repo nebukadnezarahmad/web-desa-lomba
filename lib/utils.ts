@@ -5,12 +5,17 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+/**
+ * Sengaja TIDAK memakai `style: "currency"` — versi ICU Node.js (server)
+ * dan browser (client) bisa beda soal spasi antara "Rp" dan angkanya,
+ * menyebabkan hydration mismatch. Format angka biasa lalu tempel "Rp"
+ * sendiri supaya hasilnya pasti sama di server maupun client.
+ */
 export function formatRupiah(nilai: number): string {
-  return new Intl.NumberFormat("id-ID", {
-    style: "currency",
-    currency: "IDR",
+  const angka = new Intl.NumberFormat("id-ID", {
     maximumFractionDigits: 0,
   }).format(nilai);
+  return `Rp ${angka}`;
 }
 
 /** "2026-08-14" -> "14 Agustus 2026" */
