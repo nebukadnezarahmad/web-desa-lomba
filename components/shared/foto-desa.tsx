@@ -9,6 +9,11 @@ type FotoDesaProps = {
   className?: string;
   rasio?: "persegi" | "lanskap" | "potret";
   prioritas?: boolean;
+  /**
+   * Keterangan kecil di bawah foto. Wajib diisi untuk foto stok yang bukan
+   * diambil di desa ini, supaya pembaca tidak menyangka itu lokasi setempat.
+   */
+  keterangan?: string;
 };
 
 const rasioKelas: Record<NonNullable<FotoDesaProps["rasio"]>, string> = {
@@ -30,6 +35,7 @@ export function FotoDesa({
   className,
   rasio = "lanskap",
   prioritas = false,
+  keterangan,
 }: FotoDesaProps) {
   if (!src) {
     return (
@@ -50,7 +56,7 @@ export function FotoDesa({
     );
   }
 
-  return (
+  const gambar = (
     <div className={cn("relative overflow-hidden", rasioKelas[rasio], className)}>
       <Image
         src={`/foto/${src}`}
@@ -61,5 +67,16 @@ export function FotoDesa({
         className="object-cover"
       />
     </div>
+  );
+
+  if (!keterangan) return gambar;
+
+  return (
+    <figure>
+      {gambar}
+      <figcaption className="mt-2 text-[0.75rem] leading-snug text-ink-faint">
+        {keterangan}
+      </figcaption>
+    </figure>
   );
 }

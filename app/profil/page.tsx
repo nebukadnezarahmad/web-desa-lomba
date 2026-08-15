@@ -56,9 +56,11 @@ export default function HalamanProfil() {
               Bagaimana desa ini terbentuk
             </h2>
             <FotoDesa
-              alt="Gapura masuk Desa Tegalrejo"
+              src="sawah-terasering.jpg"
+              alt="Hamparan sawah berteras dengan barisan pohon kelapa di kejauhan"
               rasio="potret"
               className="mt-6 rounded-[var(--radius-card)]"
+              keterangan="Foto ilustrasi, belum diambil di lokasi desa."
             />
           </div>
           <div className="flex flex-col gap-5">
