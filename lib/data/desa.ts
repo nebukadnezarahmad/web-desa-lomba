@@ -2,46 +2,83 @@
  * Identitas desa — sumber tunggal. Ganti di sini untuk rebrand; seluruh
  * halaman, metadata, dan data contoh ikut menyesuaikan.
  *
- * Catatan: statistik warga, nomor telepon, dan email di bawah masih angka
- * contoh, belum data resmi. Ganti dengan data sebenarnya sebelum situs ini
- * dipakai warga.
+ * MANA YANG DATA ASLI, MANA YANG ISIAN SEMENTARA
+ *
+ * Asli (Desa Tegalrejo, Kec. Ngadirejo, Kab. Temanggung):
+ *   nama, kecamatan, kabupaten, provinsi, kodePos (56255),
+ *   alamatBalai (Jln. Jumprit KM.04), luasWilayah (891 ha),
+ *   jumlahDusun (4), jumlahRw (7), jumlahRt (28), ketinggian (1.300 mdpl),
+ *   dan statistikDesa jumlah warga (2.958) + kepala keluarga (897).
+ *   Sumber: situs resmi desa, Wikipedia, dan data kecamatan.
+ *
+ * Isian sementara — JANGAN dikutip sebagai data resmi:
+ *   telepon dan email sengaja tidak memakai kontak asli perangkat desa,
+ *   supaya warga tidak menghubungi petugas sungguhan soal pengumuman
+ *   yang isinya masih contoh.
+ *   Nama dusun, sebaran warga dan KK per RT di daftarRt, jumlah UMKM,
+ *   dan jumlah posyandu juga masih karangan — angka totalnya saja yang
+ *   dicocokkan dengan data asli.
  */
 export const desa = {
   merek: "Balai",
   tagline: "Satu pintu untuk warga desa.",
   nama: "Desa Tegalrejo",
-  kecamatan: "Kecamatan Watubelah",
-  kabupaten: "Kabupaten Sukoharjo",
+  kecamatan: "Kecamatan Ngadirejo",
+  kabupaten: "Kabupaten Temanggung",
   provinsi: "Jawa Tengah",
-  kodePos: "57557",
-  alamatBalai: "Jl. Raya Tegalrejo No. 1, Dusun Krajan",
-  telepon: "(0271) 555 1240",
-  email: "balaidesa@tegalrejo.desa.id",
+  kodePos: "56255",
+  alamatBalai: "Jln. Jumprit KM.04",
+  telepon: "Belum dicantumkan",
+  email: "Belum dicantumkan",
   jamLayanan: "Senin–Jumat, 08.00–15.00 WIB",
-  luasWilayah: "412 hektar",
-  jumlahDusun: 5,
+  luasWilayah: "891 hektar",
+  jumlahDusun: 4,
+  jumlahRw: 7,
+  jumlahRt: 28,
+  ketinggian: "1.300 mdpl",
 } as const;
 
 export const statistikDesa = [
-  { label: "Jumlah warga", nilai: 4287, satuan: "jiwa" },
-  { label: "Kepala keluarga", nilai: 1146, satuan: "KK" },
+  { label: "Jumlah warga", nilai: 2958, satuan: "jiwa" },
+  { label: "Kepala keluarga", nilai: 897, satuan: "KK" },
   { label: "UMKM terdaftar", nilai: 63, satuan: "usaha" },
   { label: "Posyandu aktif", nilai: 6, satuan: "unit" },
 ] as const;
 
+/**
+ * Empat dusun, tujuh RW, dua puluh delapan RT — jumlahnya mengikuti data
+ * asli desa. Nama dusun serta sebaran warga dan KK per RT masih karangan;
+ * totalnya saja yang pas dengan angka resmi (2.958 jiwa, 897 KK).
+ */
 export const daftarRt = [
-  { rt: "RT 01", rw: "RW 01", dusun: "Krajan", kk: 84, warga: 312 },
-  { rt: "RT 02", rw: "RW 01", dusun: "Krajan", kk: 91, warga: 344 },
-  { rt: "RT 03", rw: "RW 01", dusun: "Krajan", kk: 78, warga: 289 },
-  { rt: "RT 04", rw: "RW 02", dusun: "Sidorejo", kk: 96, warga: 361 },
-  { rt: "RT 05", rw: "RW 02", dusun: "Sidorejo", kk: 88, warga: 327 },
-  { rt: "RT 06", rw: "RW 02", dusun: "Sidorejo", kk: 102, warga: 388 },
-  { rt: "RT 07", rw: "RW 03", dusun: "Ngadirejo", kk: 79, warga: 294 },
-  { rt: "RT 08", rw: "RW 03", dusun: "Ngadirejo", kk: 93, warga: 351 },
-  { rt: "RT 09", rw: "RW 04", dusun: "Tegalsari", kk: 108, warga: 402 },
-  { rt: "RT 10", rw: "RW 04", dusun: "Tegalsari", kk: 85, warga: 318 },
-  { rt: "RT 11", rw: "RW 05", dusun: "Banjaran", kk: 121, warga: 449 },
-  { rt: "RT 12", rw: "RW 05", dusun: "Banjaran", kk: 121, warga: 452 },
+  { rt: "RT 01", rw: "RW 01", dusun: "Krajan", kk: 36, warga: 118 },
+  { rt: "RT 02", rw: "RW 01", dusun: "Krajan", kk: 32, warga: 104 },
+  { rt: "RT 03", rw: "RW 01", dusun: "Krajan", kk: 29, warga: 96 },
+  { rt: "RT 04", rw: "RW 01", dusun: "Krajan", kk: 40, warga: 131 },
+  { rt: "RT 05", rw: "RW 02", dusun: "Krajan", kk: 33, warga: 109 },
+  { rt: "RT 06", rw: "RW 02", dusun: "Krajan", kk: 26, warga: 87 },
+  { rt: "RT 07", rw: "RW 02", dusun: "Krajan", kk: 37, warga: 122 },
+  { rt: "RT 08", rw: "RW 02", dusun: "Krajan", kk: 30, warga: 99 },
+  { rt: "RT 09", rw: "RW 03", dusun: "Banjaran", kk: 28, warga: 92 },
+  { rt: "RT 10", rw: "RW 03", dusun: "Banjaran", kk: 35, warga: 115 },
+  { rt: "RT 11", rw: "RW 03", dusun: "Banjaran", kk: 31, warga: 103 },
+  { rt: "RT 12", rw: "RW 03", dusun: "Banjaran", kk: 27, warga: 88 },
+  { rt: "RT 13", rw: "RW 03", dusun: "Banjaran", kk: 38, warga: 127 },
+  { rt: "RT 14", rw: "RW 03", dusun: "Banjaran", kk: 29, warga: 96 },
+  { rt: "RT 15", rw: "RW 04", dusun: "Jumprit", kk: 34, warga: 111 },
+  { rt: "RT 16", rw: "RW 04", dusun: "Jumprit", kk: 28, warga: 94 },
+  { rt: "RT 17", rw: "RW 04", dusun: "Jumprit", kk: 32, warga: 106 },
+  { rt: "RT 18", rw: "RW 04", dusun: "Jumprit", kk: 37, warga: 123 },
+  { rt: "RT 19", rw: "RW 05", dusun: "Jumprit", kk: 26, warga: 85 },
+  { rt: "RT 20", rw: "RW 05", dusun: "Jumprit", kk: 35, warga: 117 },
+  { rt: "RT 21", rw: "RW 05", dusun: "Jumprit", kk: 31, warga: 102 },
+  { rt: "RT 22", rw: "RW 06", dusun: "Tegalsari", kk: 30, warga: 98 },
+  { rt: "RT 23", rw: "RW 06", dusun: "Tegalsari", kk: 38, warga: 124 },
+  { rt: "RT 24", rw: "RW 06", dusun: "Tegalsari", kk: 27, warga: 91 },
+  { rt: "RT 25", rw: "RW 06", dusun: "Tegalsari", kk: 34, warga: 113 },
+  { rt: "RT 26", rw: "RW 07", dusun: "Tegalsari", kk: 32, warga: 107 },
+  { rt: "RT 27", rw: "RW 07", dusun: "Tegalsari", kk: 27, warga: 89 },
+  { rt: "RT 28", rw: "RW 07", dusun: "Tegalsari", kk: 35, warga: 111 },
 ] as const;
 
 export const navigasi = [

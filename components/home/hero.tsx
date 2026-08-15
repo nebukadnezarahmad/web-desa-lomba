@@ -118,7 +118,7 @@ export function Hero() {
               <div className="mt-8 border-t border-line pt-5">
                 <p className="text-[0.8125rem] leading-relaxed text-ink-muted">
                   Luas wilayah {desa.luasWilayah}, terbagi dalam{" "}
-                  {desa.jumlahDusun} dusun dan 12 RT.
+                  {desa.jumlahDusun} dusun dan {desa.jumlahRt} RT.
                 </p>
               </div>
             </div>

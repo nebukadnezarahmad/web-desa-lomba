@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/select";
 import { Label } from "@/components/ui/input";
 import { jadwalSampah } from "@/lib/data/sampah";
+import { desa } from "@/lib/data/desa";
 import { cn } from "@/lib/utils";
 
 const semuaHari = ["Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu"];
@@ -35,7 +36,9 @@ export function JadwalSampah() {
           </span>
           <div>
             <h3 className="font-bold text-ink">Pilih RT</h3>
-            <p className="text-[0.8125rem] text-ink-muted">12 RT, 5 dusun</p>
+            <p className="text-[0.8125rem] text-ink-muted">
+              {desa.jumlahRt} RT, {desa.jumlahDusun} dusun
+            </p>
           </div>
         </div>
 

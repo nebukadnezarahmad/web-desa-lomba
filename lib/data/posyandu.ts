@@ -22,7 +22,7 @@ export const posyandu: Posyandu[] = [
   },
   {
     nama: "Posyandu Anggrek",
-    dusun: "Sidorejo",
+    dusun: "Jumprit",
     melayani: "RT 04 – RT 05",
     hari: "Rabu kedua tiap bulan",
     waktu: "08.00 – 11.00 WIB",
@@ -32,7 +32,7 @@ export const posyandu: Posyandu[] = [
   },
   {
     nama: "Posyandu Mawar",
-    dusun: "Sidorejo",
+    dusun: "Jumprit",
     melayani: "RT 06",
     hari: "Kamis kedua tiap bulan",
     waktu: "08.00 – 10.30 WIB",
@@ -42,11 +42,11 @@ export const posyandu: Posyandu[] = [
   },
   {
     nama: "Posyandu Dahlia",
-    dusun: "Ngadirejo",
+    dusun: "Tegalsari",
     melayani: "RT 07 – RT 08",
     hari: "Selasa ketiga tiap bulan",
     waktu: "08.00 – 11.00 WIB",
-    alamat: "Gedung PKK Ngadirejo",
+    alamat: "Gedung PKK Tegalsari",
     kader: "Retno Palupi",
     balita: 51,
   },

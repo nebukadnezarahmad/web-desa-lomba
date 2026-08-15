@@ -42,7 +42,7 @@ export default function HalamanProfil() {
         kicker="Tentang Desa"
         tone="blue"
         judul={`Profil ${desa.nama}`}
-        deskripsi={`${desa.luasWilayah} lahan, ${desa.jumlahDusun} dusun, 12 RT, dan ${formatAngka(totalWarga)} warga di ${desa.kecamatan}, ${desa.kabupaten}, ${desa.provinsi}.`}
+        deskripsi={`${desa.luasWilayah} lahan, ${desa.jumlahDusun} dusun, ${desa.jumlahRt} RT, dan ${formatAngka(totalWarga)} warga di ${desa.kecamatan}, ${desa.kabupaten}, ${desa.provinsi}.`}
       />
 
       {/* Sejarah */}
@@ -182,7 +182,7 @@ export default function HalamanProfil() {
         <SectionHeading
           kicker="Data Wilayah"
           judul="Sebaran RT dan RW"
-          deskripsi={`${formatAngka(totalKk)} kepala keluarga tersebar di 12 RT dan 5 RW.`}
+          deskripsi={`${formatAngka(totalKk)} kepala keluarga tersebar di ${desa.jumlahRt} RT dan ${desa.jumlahRw} RW.`}
         />
 
         {/* Mobile: kartu per RT — tidak perlu geser samping */}

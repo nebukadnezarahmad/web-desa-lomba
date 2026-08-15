@@ -21,13 +21,13 @@ export const perangkatDesa: Perangkat[] = [
   {
     nama: "Wahyudi",
     jabatan: "Kepala Dusun",
-    wilayah: "Sidorejo",
+    wilayah: "Jumprit",
     sejak: "2020",
   },
   {
     nama: "Siti Aminah",
     jabatan: "Kepala Dusun",
-    wilayah: "Ngadirejo",
+    wilayah: "Tegalsari",
     sejak: "2021",
   },
   {
@@ -182,7 +182,8 @@ export const visiMisi = {
 };
 
 export const sejarahDesa = [
-  "Desa Tegalrejo terbentuk pada 1946 dari penggabungan tiga permukiman lama di sekitar aliran Sungai Tirto: Krajan, Sidorejo, dan Ngadirejo. Ketiganya sejak lama berbagi jaringan irigasi yang sama, sehingga penggabungan dianggap wajar oleh warga saat itu.",
-  "Dusun Tegalsari dan Banjaran bergabung kemudian pada 1968, seiring pembukaan lahan pertanian baru di lereng timur. Sejak itu wilayah desa mencapai bentuknya yang sekarang, seluas 412 hektar dengan lima dusun.",
-  "Pertanian padi dan aren tetap menjadi tumpuan utama. Sejak awal 2010-an, kelompok perempuan desa mulai mengolah hasil pertanian menjadi produk kemasan, yang tumbuh menjadi puluhan usaha mikro yang kini terdaftar di lapak UMKM desa.",
+  "Desa Tegalrejo berada di lereng Gunung Sindoro, pada ketinggian sekitar 1.300 meter di atas permukaan laut. Namanya berasal dari bahasa Jawa, tegal dan rejo, yang berarti ladang yang ramai — gambaran wilayah yang sejak lama hidup dari mengolah tanah.",
+  "Wilayahnya seluas 891 hektar dan terbagi dalam empat dusun: Krajan, Banjaran, Jumprit, dan Tegalsari. Hanya sekitar 20 hektar berupa sawah; sisanya tegalan dan kebun yang mengikuti kontur lereng.",
+  "Di wilayah desa terdapat Umbul Jumprit, mata air di kaki Gunung Sindoro yang menjadi hulu Sungai Progo dan tidak pernah kering meski kemarau panjang. Setiap tahun airnya diambil untuk prosesi menjelang Waisak, lalu dikirim ke Candi Mendut dan Borobudur.",
+  "Seperti umumnya desa di lereng Sindoro, tembakau, kopi, dan sayuran dataran tinggi menjadi tumpuan utama warga. Sejak awal 2010-an, kelompok perempuan desa mulai mengolah hasil kebun menjadi produk kemasan, yang tumbuh menjadi puluhan usaha mikro yang kini terdaftar di lapak UMKM desa.",
 ];
