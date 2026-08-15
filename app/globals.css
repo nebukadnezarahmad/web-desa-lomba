@@ -47,9 +47,9 @@
 
   /* Ritme vertikal — tiga tingkat, dipakai bergantian supaya halaman
      tidak terbaca seperti daftar kotak berjarak sama. */
-  --ritme-rapat: clamp(3rem, 2rem + 3vw, 4.5rem);
-  --ritme-normal: clamp(3.5rem, 2.5rem + 5vw, 7rem);
-  --ritme-lega: clamp(4.5rem, 3rem + 7vw, 9rem);
+  --ritme-rapat: clamp(2.5rem, 1.75rem + 2.5vw, 3.75rem);
+  --ritme-normal: clamp(3rem, 2.25rem + 3.5vw, 5.5rem);
+  --ritme-lega: clamp(3.5rem, 2.5rem + 4.5vw, 6.5rem);
 }
 
 @theme inline {

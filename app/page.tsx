@@ -24,8 +24,8 @@ export default function Beranda() {
           aria-hidden
           className="kontur-biru pointer-events-none absolute inset-0"
         />
-        <div className="relative mx-auto w-full max-w-6xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-center">
+        <div className="relative mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 md:py-20 lg:px-8">
+          <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-center">
             <div>
               <p className="mb-4 text-xs font-bold uppercase tracking-[0.14em] text-blue-strong">
                 Layanan Warga

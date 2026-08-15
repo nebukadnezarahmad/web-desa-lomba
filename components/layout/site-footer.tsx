@@ -20,41 +20,41 @@ const tautanLain = [
 export function SiteFooter() {
   return (
     <footer className="border-t border-line bg-surface-soft">
-      <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
+      <div className="mx-auto w-full max-w-6xl px-4 py-8 sm:px-6 sm:py-9 lg:px-8">
+        <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
           <div>
             <Logo />
-            <ul className="mt-6 flex flex-col gap-3 text-[0.9375rem] text-ink-muted">
-              <li className="flex gap-3">
+            <ul className="mt-4 flex flex-col gap-2 text-[0.9375rem] text-ink-muted sm:flex-row sm:flex-wrap sm:gap-x-5 sm:gap-y-1.5">
+              <li className="flex items-center gap-2">
                 <MapPinIcon
-                  size={19}
+                  size={17}
                   weight="duotone"
-                  className="mt-0.5 shrink-0 text-green-strong"
+                  className="shrink-0 text-green-strong"
                 />
                 <span>
                   {desa.alamatBalai}, {desa.nama}, {desa.kecamatan},{" "}
                   {desa.kabupaten} {desa.kodePos}
                 </span>
               </li>
-              <li className="flex gap-3">
+              <li className="flex items-center gap-2">
                 <PhoneIcon
-                  size={19}
+                  size={17}
                   weight="duotone"
                   className="shrink-0 text-green-strong"
                 />
                 <span>{desa.telepon}</span>
               </li>
-              <li className="flex gap-3">
+              <li className="flex items-center gap-2">
                 <EnvelopeSimpleIcon
-                  size={19}
+                  size={17}
                   weight="duotone"
                   className="shrink-0 text-green-strong"
                 />
                 <span>{desa.email}</span>
               </li>
-              <li className="flex gap-3">
+              <li className="flex items-center gap-2">
                 <ClockIcon
-                  size={19}
+                  size={17}
                   weight="duotone"
                   className="shrink-0 text-blue-strong"
                 />
@@ -63,44 +63,46 @@ export function SiteFooter() {
             </ul>
           </div>
 
-          <nav aria-label="Halaman utama">
-            <h2 className="mb-4 text-sm font-bold uppercase tracking-[0.12em] text-ink">
-              Halaman
-            </h2>
-            <ul className="flex flex-col gap-2.5">
-              {navigasi.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="-mx-2 inline-block rounded-lg px-2 py-1.5 text-[0.9375rem] text-ink-muted transition-colors hover:text-green-strong"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
+          <div className="flex flex-col gap-4 sm:flex-row sm:gap-10">
+            <nav aria-label="Halaman utama">
+              <h2 className="mb-2 text-xs font-bold uppercase tracking-[0.12em] text-ink">
+                Halaman
+              </h2>
+              <ul className="flex flex-wrap gap-x-4 gap-y-1.5">
+                {navigasi.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className="inline-block text-[0.9375rem] text-ink-muted transition-colors hover:text-green-strong"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
 
-          <nav aria-label="Tautan lain">
-            <h2 className="mb-4 text-sm font-bold uppercase tracking-[0.12em] text-ink">
-              Warga
-            </h2>
-            <ul className="flex flex-col gap-2.5">
-              {tautanLain.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="-mx-2 inline-block rounded-lg px-2 py-1.5 text-[0.9375rem] text-ink-muted transition-colors hover:text-green-strong"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
+            <nav aria-label="Tautan lain">
+              <h2 className="mb-2 text-xs font-bold uppercase tracking-[0.12em] text-ink">
+                Warga
+              </h2>
+              <ul className="flex flex-wrap gap-x-4 gap-y-1.5">
+                {tautanLain.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className="inline-block text-[0.9375rem] text-ink-muted transition-colors hover:text-green-strong"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
         </div>
 
-        <div className="mt-12 border-t border-line pt-7 text-sm text-ink-faint">
+        <div className="mt-6 border-t border-line pt-4 text-sm text-ink-faint">
           <p>
             &copy; {new Date().getFullYear()} Pemerintah {desa.nama},{" "}
             {desa.kabupaten}.

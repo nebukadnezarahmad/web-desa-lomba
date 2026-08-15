@@ -32,7 +32,7 @@ export function PageHeader({
         aria-hidden
         className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-surface"
       />
-      <div className="relative mx-auto w-full max-w-6xl px-4 py-12 sm:px-6 sm:py-16 md:py-24 lg:px-8">
+      <div className="relative mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 sm:py-14 md:py-18 lg:px-8">
         <p
           className={cn(
             "kicker mb-3 sm:mb-4",
