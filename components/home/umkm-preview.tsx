@@ -44,7 +44,7 @@ export function UmkmPreview() {
         >
           <Link
             href={`/umkm/${sorotan.slug}`}
-            className="group flex h-full flex-col overflow-hidden rounded-[var(--radius-panel)] border border-line bg-surface transition-all duration-200 hover:-translate-y-0.5 hover:border-green/40 hover:shadow-lg hover:shadow-green/8"
+            className="group flex h-full flex-col overflow-hidden rounded-[var(--radius-panel)] border border-line bg-surface transition-[transform,border-color,box-shadow,color] duration-[var(--gerak-cepat)] ease-[var(--ease-out-quint)] hover:-translate-y-0.5 hover:border-green/40 hover:shadow-lg hover:shadow-green/8"
           >
             <FotoDesa
               src={sorotan.foto}
@@ -78,7 +78,7 @@ export function UmkmPreview() {
           <Reveal key={p.slug} index={i + 1}>
             <Link
               href={`/umkm/${p.slug}`}
-              className="group flex h-full flex-col overflow-hidden rounded-[var(--radius-card)] border border-line bg-surface transition-all duration-200 hover:-translate-y-0.5 hover:border-green/40 hover:shadow-lg hover:shadow-green/8"
+              className="group flex h-full flex-col overflow-hidden rounded-[var(--radius-card)] border border-line bg-surface transition-[transform,border-color,box-shadow,color] duration-[var(--gerak-cepat)] ease-[var(--ease-out-quint)] hover:-translate-y-0.5 hover:border-green/40 hover:shadow-lg hover:shadow-green/8"
             >
               <ProdukThumb
                 kategori={p.kategori}

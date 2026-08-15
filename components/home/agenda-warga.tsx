@@ -22,7 +22,7 @@ const kemiringan = ["-2deg", "1.5deg", "-1deg", "2deg", "-1.5deg", "1deg"];
 
 export function AgendaWarga() {
   return (
-    <Section latar="lembut">
+    <Section latar="putih" ritme="normal">
       <SectionHeading
         kicker="Kalender Warga"
         judul="Agenda yang akan datang"

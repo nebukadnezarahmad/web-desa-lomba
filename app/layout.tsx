@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Plus_Jakarta_Sans, Bricolage_Grotesque } from "next/font/google";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { BottomNav } from "@/components/layout/bottom-nav";
@@ -7,11 +7,23 @@ import { desa } from "@/lib/data/desa";
 import "./globals.css";
 
 // Plus Jakarta Sans — tipografi identitas kota Jakarta oleh Tokotype.
-// Huruf sipil Indonesia untuk situs sipil Indonesia.
+// Huruf sipil Indonesia untuk situs sipil Indonesia. Menangani seluruh
+// teks isi, label, tombol, dan angka.
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+});
+
+// Bricolage Grotesque — grotesk utilitarian dengan sumbu optical size.
+// Dipakai TERBATAS: hanya judul besar. Wataknya mirip huruf papan
+// pengumuman balai desa — tegas dan sedikit kaku, bukan elegan. Itu yang
+// membedakannya dari serif display yang jadi refleks di mana-mana.
+const bricolage = Bricolage_Grotesque({
+  variable: "--font-bricolage",
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
   display: "swap",
 });
 
@@ -25,7 +37,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="id" className={`${jakarta.variable} h-full`}>
+    <html
+      lang="id"
+      className={`${jakarta.variable} ${bricolage.variable} h-full`}
+
+    >
       <body className="flex min-h-full flex-col overflow-x-hidden">
         <a
           href="#konten"

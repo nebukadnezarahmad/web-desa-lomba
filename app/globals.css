@@ -37,7 +37,19 @@
   --warn-soft: #fef3c7;
 
   --radius: 0.75rem;
+
+  /* Gerak — dua tingkat saja, jangan lebih.
+     Cepat untuk mikro-interaksi yang harus terasa langsung di jari;
+     tenang untuk elemen yang masuk layar. */
   --ease-out-quint: cubic-bezier(0.16, 1, 0.3, 1);
+  --gerak-cepat: 180ms;
+  --gerak-tenang: 520ms;
+
+  /* Ritme vertikal — tiga tingkat, dipakai bergantian supaya halaman
+     tidak terbaca seperti daftar kotak berjarak sama. */
+  --ritme-rapat: clamp(3rem, 2rem + 3vw, 4.5rem);
+  --ritme-normal: clamp(3.5rem, 2.5rem + 5vw, 7rem);
+  --ritme-lega: clamp(4.5rem, 3rem + 7vw, 9rem);
 }
 
 @theme inline {
@@ -67,7 +79,11 @@
   --color-warn-soft: var(--warn-soft);
 
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-bricolage), var(--font-jakarta), ui-sans-serif, sans-serif;
 
+  /* Radius bertingkat — kartu kecil lebih tajam, panel besar lebih lunak.
+     Radius seragam di segala ukuran membuat semuanya terlihat sederajat. */
+  --radius-chip: 0.625rem;
   --radius-card: 0.875rem;
   --radius-panel: 1.25rem;
 }
@@ -87,13 +103,39 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Judul besar memakai huruf display; judul kecil tetap Jakarta supaya
+   tidak berebut perhatian dengan isi. Pembagiannya di kelas, bukan di
+   elemen — h3 di dalam kartu tidak sepatutnya sekeras h1 di hero. */
 h1,
 h2,
 h3,
 h4 {
-  letter-spacing: -0.03em;
-  line-height: 1.12;
+  letter-spacing: -0.02em;
+  line-height: 1.14;
   text-wrap: balance;
+}
+
+.judul-display {
+  font-family: var(--font-bricolage), var(--font-jakarta), sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+}
+
+/* Eyebrow / kicker — huruf kecil berjarak lebar. Menandai jenis isi,
+   bukan hiasan: tiap seksi punya satu, dan warnanya mengikuti peran
+   hijau/biru yang sudah ditetapkan. */
+.kicker {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 640px) {
+  .kicker {
+    font-size: 0.75rem;
+  }
 }
 
 p {
@@ -126,15 +168,70 @@ p {
   background-size: 560px 560px;
 }
 
+/* ---------- Pita elevasi — tanda tangan situs ini ----------
+   Desa Tegalrejo duduk di 1.300 mdpl di lereng Sindoro. Dari 891 hektar,
+   hanya 20 berupa sawah; sisanya tegalan yang mengikuti kontur lereng.
+   Garis kontur di sini bukan ornamen — itu bentuk tanahnya sendiri.
+   Pita bertingkat ini membaca sebagai penampang lereng, dari kaki
+   (hijau pekat) ke puncak (hampir putih). */
+
+.pita-elevasi {
+  background-image:
+    linear-gradient(
+      to top,
+      color-mix(in srgb, var(--green) 13%, transparent) 0%,
+      color-mix(in srgb, var(--green) 13%, transparent) 22%,
+      color-mix(in srgb, var(--green) 9%, transparent) 22%,
+      color-mix(in srgb, var(--green) 9%, transparent) 44%,
+      color-mix(in srgb, var(--green) 6%, transparent) 44%,
+      color-mix(in srgb, var(--green) 6%, transparent) 64%,
+      color-mix(in srgb, var(--green) 3.5%, transparent) 64%,
+      color-mix(in srgb, var(--green) 3.5%, transparent) 82%,
+      color-mix(in srgb, var(--green) 1.5%, transparent) 82%,
+      color-mix(in srgb, var(--green) 1.5%, transparent) 100%
+    );
+}
+
+/* Garis kontur tipis di batas tiap pita — penanda ketinggian, bukan garis
+   pemisah biasa. Sengaja tidak sampai tepi kanan supaya terbaca sebagai
+   garis peta yang terpotong bingkai, bukan border kotak. */
+.garis-elevasi {
+  background-image: repeating-linear-gradient(
+    to top,
+    transparent 0,
+    transparent calc(22% - 1px),
+    color-mix(in srgb, var(--green) 26%, transparent) calc(22% - 1px),
+    color-mix(in srgb, var(--green) 26%, transparent) 22%
+  );
+}
+
+/* Pembatas antar-seksi: satu garis kontur melintang, bukan garis lurus.
+   Perubahan seksi dibaca seperti perubahan ketinggian. */
+.batas-kontur {
+  height: 24px;
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: 480px 24px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='24' viewBox='0 0 480 24'%3E%3Cg fill='none' stroke='%2316a34a' stroke-width='1.2' opacity='0.28'%3E%3Cpath d='M0 15c40-9 78-11 120-4 42 7 78 13 122 6 44-7 80-14 124-7 44 7 78 9 114 2'/%3E%3Cpath d='M0 21c40-9 78-11 120-4 42 7 78 13 122 6 44-7 80-14 124-7 44 7 78 9 114 2' opacity='0.5'/%3E%3C/g%3E%3C/svg%3E");
+}
+
 /* ---------- Reveal on scroll (IntersectionObserver) ---------- */
 
+/* Jarak naiknya kecil saja. Reveal yang terlalu jauh terasa seperti
+   efek yang ditempel, bukan isi yang menetap di tempatnya. Stagger 45ms
+   cukup untuk terbaca berurutan tanpa membuat menunggu. */
 [data-reveal] {
   opacity: 0;
-  transform: translateY(14px);
+  transform: translateY(10px);
   transition:
-    opacity 520ms var(--ease-out-quint),
-    transform 520ms var(--ease-out-quint);
-  transition-delay: calc(var(--reveal-index, 0) * 60ms);
+    opacity var(--gerak-tenang) var(--ease-out-quint),
+    transform var(--gerak-tenang) var(--ease-out-quint);
+  transition-delay: calc(var(--reveal-index, 0) * 45ms);
+  will-change: opacity, transform;
+}
+
+[data-reveal="shown"] {
+  will-change: auto;
 }
 
 [data-reveal="shown"] {

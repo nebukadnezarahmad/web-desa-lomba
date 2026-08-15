@@ -8,8 +8,9 @@ import { pengumumanTerbaru } from "@/lib/data/pengumuman";
 import { formatTanggal } from "@/lib/utils";
 
 export function PengumumanTerbaru() {
+  // Ritme rapat — ini cuplikan tiga kabar, bukan bacaan panjang.
   return (
-    <Section latar="putih">
+    <Section latar="putih" ritme="rapat">
       <SectionHeading
         kicker="Kabar Resmi"
         tone="blue"
@@ -30,7 +31,7 @@ export function PengumumanTerbaru() {
           <Reveal as="li" key={p.slug} index={i}>
             <Link
               href={`/pengumuman/${p.slug}`}
-              className="group flex h-full flex-col rounded-[var(--radius-card)] border border-line bg-surface p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-blue/40 hover:shadow-lg hover:shadow-blue/5"
+              className="group flex h-full flex-col rounded-[var(--radius-card)] border border-line bg-surface p-6 transition-[transform,border-color,box-shadow,color] duration-[var(--gerak-cepat)] ease-[var(--ease-out-quint)] hover:-translate-y-0.5 hover:border-blue/40 hover:shadow-lg hover:shadow-blue/5"
             >
               <div className="mb-4 flex flex-wrap items-center gap-2">
                 <Badge tone="blue">{p.kategori}</Badge>

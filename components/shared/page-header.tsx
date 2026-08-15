@@ -35,13 +35,13 @@ export function PageHeader({
       <div className="relative mx-auto w-full max-w-6xl px-4 py-12 sm:px-6 sm:py-16 md:py-24 lg:px-8">
         <p
           className={cn(
-            "mb-3 text-[0.6875rem] font-bold uppercase tracking-[0.14em] sm:mb-4 sm:text-xs",
+            "kicker mb-3 sm:mb-4",
             tone === "green" ? "text-green-strong" : "text-blue-strong",
           )}
         >
           {kicker}
         </p>
-        <h1 className="max-w-3xl text-[1.875rem] font-extrabold text-ink sm:text-[2.5rem] md:text-[3.25rem]">
+        <h1 className="judul-display max-w-3xl text-[2rem] text-ink sm:text-[2.75rem] md:text-[3.5rem]">
           {judul}
         </h1>
         <p className="mt-4 max-w-2xl text-[0.9375rem] leading-relaxed text-ink-muted sm:mt-5 sm:text-[1.0625rem]">

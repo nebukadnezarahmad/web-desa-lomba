@@ -75,8 +75,11 @@ const contohStatus = [
 ];
 
 export function BentoLayanan() {
+  // Seksi terpenting halaman ini: apa yang bisa warga kerjakan sendiri.
+  // Diberi ruang paling lega dan ditandai garis kontur — di sinilah
+  // halaman berpindah dari "kabar" ke "tindakan".
   return (
-    <Section latar="putih">
+    <Section latar="lembut" ritme="lega" batas>
       <SectionHeading
         kicker="Layanan Inti"
         judul="Yang bisa warga kerjakan di sini"

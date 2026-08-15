@@ -2,6 +2,7 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 
 type Latar = "putih" | "lembut" | "biru";
+type Ritme = "rapat" | "normal" | "lega";
 
 const latarKelas: Record<Latar, string> = {
   putih: "bg-surface",
@@ -9,17 +10,42 @@ const latarKelas: Record<Latar, string> = {
   biru: "bg-surface-tint",
 };
 
+/**
+ * Ritme vertikal sengaja tidak seragam. Halaman dengan jarak antar-seksi
+ * yang persis sama terbaca seperti daftar kotak; variasi memberi tekanan
+ * pada seksi yang memang lebih penting.
+ */
+const ritmeKelas: Record<Ritme, string> = {
+  rapat: "py-[var(--ritme-rapat)]",
+  normal: "py-[var(--ritme-normal)]",
+  lega: "py-[var(--ritme-lega)]",
+};
+
 export function Section({
   latar = "putih",
+  ritme = "normal",
+  batas = false,
   className,
   children,
   ...props
-}: React.ComponentProps<"section"> & { latar?: Latar }) {
+}: React.ComponentProps<"section"> & {
+  latar?: Latar;
+  ritme?: Ritme;
+  /** Garis kontur melintang di atas seksi — perubahan seksi dibaca
+   *  sebagai perubahan ketinggian, bukan sekadar garis pemisah. */
+  batas?: boolean;
+}) {
   return (
     <section
-      className={cn("py-14 sm:py-20 md:py-28", latarKelas[latar], className)}
+      className={cn("relative", ritmeKelas[ritme], latarKelas[latar], className)}
       {...props}
     >
+      {batas && (
+        <div
+          aria-hidden
+          className="batas-kontur pointer-events-none absolute inset-x-0 top-0"
+        />
+      )}
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
         {children}
       </div>
@@ -53,18 +79,18 @@ export function SectionHeading({
         {kicker && (
           <p
             className={cn(
-              "mb-2.5 text-[0.6875rem] font-bold uppercase tracking-[0.14em] sm:mb-3 sm:text-xs",
+              "kicker mb-2.5 sm:mb-3",
               tone === "green" ? "text-green-strong" : "text-blue-strong",
             )}
           >
             {kicker}
           </p>
         )}
-        <h2 className="text-[1.5rem] font-extrabold text-ink sm:text-[1.75rem] md:text-[2.125rem]">
+        <h2 className="judul-display text-[1.625rem] text-ink sm:text-[2rem] md:text-[2.375rem]">
           {judul}
         </h2>
         {deskripsi && (
-          <p className="mt-2.5 text-[0.9375rem] leading-relaxed text-ink-muted sm:mt-3 sm:text-base md:text-[1.0625rem]">
+          <p className="mt-3 text-[0.9375rem] leading-relaxed text-ink-muted sm:mt-4 sm:text-base md:text-[1.0625rem]">
             {deskripsi}
           </p>
         )}

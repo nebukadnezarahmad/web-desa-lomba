@@ -66,7 +66,7 @@ export function DaftarPengumuman() {
             <li key={p.slug}>
               <Link
                 href={`/pengumuman/${p.slug}`}
-                className="group flex flex-col gap-4 rounded-[var(--radius-card)] border border-line bg-surface p-6 transition-all duration-200 hover:border-blue/40 hover:shadow-lg hover:shadow-blue/5 sm:flex-row sm:items-start sm:gap-8"
+                className="group flex flex-col gap-4 rounded-[var(--radius-card)] border border-line bg-surface p-6 transition-[transform,border-color,box-shadow,color] duration-[var(--gerak-cepat)] ease-[var(--ease-out-quint)] hover:border-blue/40 hover:shadow-lg hover:shadow-blue/5 sm:flex-row sm:items-start sm:gap-8"
               >
                 <div className="flex shrink-0 flex-wrap items-center gap-2 sm:w-40 sm:flex-col sm:items-start">
                   <Badge tone="blue">{p.kategori}</Badge>
