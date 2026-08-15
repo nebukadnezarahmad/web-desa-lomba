@@ -13,7 +13,7 @@ import { formatAngka } from "@/lib/utils";
 const pintasan = [
   {
     label: "Lihat Laporan",
-    href: "/lapor/daftar",
+    href: "/lapor#daftar",
     ikon: ClipboardTextIcon,
     tone: "blue",
   },

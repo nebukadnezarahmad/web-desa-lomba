@@ -9,7 +9,7 @@ import { Logo } from "@/components/layout/logo";
 import { desa, navigasi } from "@/lib/data/desa";
 
 const tautanLain = [
-  { label: "Daftar laporan warga", href: "/lapor/daftar" },
+  { label: "Daftar laporan warga", href: "/lapor#daftar" },
   { label: "Cek status laporan", href: "/lapor/status" },
   { label: "Pengumuman", href: "/pengumuman" },
   { label: "Layanan administrasi", href: "/profil#layanan" },
