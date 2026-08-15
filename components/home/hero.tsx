@@ -50,10 +50,9 @@ export function Hero() {
             </h1>
 
             <p className="mt-4 max-w-xl text-[0.9375rem] leading-relaxed text-ink-muted sm:mt-6 sm:text-lg">
-              Jadwal posyandu, sampah diangkut hari apa, ada pengumuman apa
-              minggu ini, sampai keripik tempe Bu Marni masih ada atau tidak —{" "}
-              {desa.nama} kumpulkan semua di satu tempat, tanpa harus scroll
-              chat grup yang isinya kadung bercampur promosi arisan.
+              Semua kumpulan informasi, program, dan layanan {desa.nama} berada
+              di sini. Mulai jadwal posyandu, laporan dan kendala warga, jadwal
+              angkutan sampah, sampai pembukaan lapak usaha warga.
             </p>
 
             <div className="mt-7 flex flex-col gap-2.5 sm:mt-9 sm:flex-row sm:gap-3">
