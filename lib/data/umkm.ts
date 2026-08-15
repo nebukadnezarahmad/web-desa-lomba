@@ -25,6 +25,7 @@ export type Produk = {
 export const produkUmkm: Produk[] = [
   {
     slug: "keripik-tempe-bu-marni",
+    foto: "keripik-tempe.jpg",
     nama: "Keripik Tempe Rempah",
     kategori: "Makanan",
     harga: 18000,
@@ -85,6 +86,7 @@ export const produkUmkm: Produk[] = [
   },
   {
     slug: "batik-tulis-motif-padi",
+    foto: "batik-tulis-padi.jpg",
     nama: "Batik Tulis Motif Padi Tegalrejo",
     kategori: "Kerajinan",
     harga: 285000,
@@ -105,6 +107,7 @@ export const produkUmkm: Produk[] = [
   },
   {
     slug: "beras-merah-organik",
+    foto: "beras-merah.jpg",
     nama: "Beras Merah Organik",
     kategori: "Pertanian",
     harga: 24000,
@@ -143,6 +146,7 @@ export const produkUmkm: Produk[] = [
   },
   {
     slug: "jasa-servis-mesin-pertanian",
+    foto: "servis-mesin.jpg",
     nama: "Servis Mesin Pertanian",
     kategori: "Jasa",
     harga: 75000,
@@ -181,6 +185,7 @@ export const produkUmkm: Produk[] = [
   },
   {
     slug: "peyek-kacang-renyah",
+    foto: "peyek-kacang.jpg",
     nama: "Peyek Kacang dan Rebon",
     kategori: "Makanan",
     harga: 15000,
