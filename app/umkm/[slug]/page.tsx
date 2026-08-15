@@ -55,7 +55,7 @@ export default async function HalamanProduk(props: PageProps<"/umkm/[slug]">) {
       </Link>
 
       <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-14">
-        <div className="self-start overflow-hidden rounded-[var(--radius-panel)] border border-line">
+        <div className="overflow-hidden rounded-[var(--radius-panel)] border border-line">
           <ProdukThumb
             kategori={produk.kategori}
             foto={produk.foto}

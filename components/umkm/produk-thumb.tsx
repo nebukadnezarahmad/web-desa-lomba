@@ -56,7 +56,14 @@ export function ProdukThumb({
   ukuran?: "kartu" | "besar";
   className?: string;
 }) {
-  const rasio = ukuran === "kartu" ? "aspect-[4/3]" : "aspect-[16/10]";
+  /**
+   * "besar" dipakai berdampingan dengan kolom teks di halaman detail produk.
+   * Di layar sempit (satu kolom) foto pakai rasio 16:10 tetap; di layar lebar
+   * (lg:) tingginya mengikuti kolom teks di sebelahnya lewat grid stretch,
+   * supaya tepi bawah foto sejajar dengan tepi bawah kartu penjual.
+   */
+  const rasio =
+    ukuran === "kartu" ? "aspect-[4/3]" : "aspect-[16/10] lg:aspect-auto lg:h-full";
 
   if (foto) {
     return (
