@@ -12,9 +12,9 @@
  *   Sumber: situs resmi desa, Wikipedia, dan data kecamatan.
  *
  * Isian sementara — JANGAN dikutip sebagai data resmi:
- *   telepon dan email sengaja tidak memakai kontak asli perangkat desa,
- *   supaya warga tidak menghubungi petugas sungguhan soal pengumuman
- *   yang isinya masih contoh.
+ *   telepon dan email sengaja diisi nomor/alamat karangan, bukan kontak
+ *   asli perangkat desa, supaya warga tidak menghubungi petugas
+ *   sungguhan soal pengumuman yang isinya masih contoh.
  *   Nama dusun, sebaran warga dan KK per RT di daftarRt, jumlah UMKM,
  *   dan jumlah posyandu juga masih karangan — angka totalnya saja yang
  *   dicocokkan dengan data asli.
@@ -28,8 +28,8 @@ export const desa = {
   provinsi: "Jawa Tengah",
   kodePos: "56255",
   alamatBalai: "Jln. Jumprit KM.04",
-  telepon: "Belum dicantumkan",
-  email: "Belum dicantumkan",
+  telepon: "(0293) 591234",
+  email: "balaidesa.tegalrejo@contoh.id",
   jamLayanan: "Senin–Jumat, 08.00–15.00 WIB",
   luasWilayah: "891 hektar",
   jumlahDusun: 4,
