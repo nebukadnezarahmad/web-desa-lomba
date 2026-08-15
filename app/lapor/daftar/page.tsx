@@ -20,6 +20,15 @@ export const metadata: Metadata = {
   description: "Laporan warga yang sudah ditinjau petugas desa, diurutkan dari yang terbaru.",
 };
 
+/**
+ * Wajib dinamis. Halaman ini tidak membaca searchParams maupun cookie, jadi
+ * tanpa penanda ini Next.js memprerender-nya sebagai halaman statis: query
+ * daftar_laporan_publik() hanya jalan sekali saat build, lalu hasilnya
+ * dibekukan ke HTML. Akibatnya laporan yang baru disetujui petugas tidak
+ * pernah muncul sampai ada build ulang.
+ */
+export const dynamic = "force-dynamic";
+
 const gayaStatus: Record<StatusLaporan, { label: string; tone: "green" | "blue" | "warn" | "danger" | "netral" }> = {
   menunggu: { label: "Menunggu Ditinjau", tone: "netral" },
   diterima: { label: "Diterima", tone: "blue" },
