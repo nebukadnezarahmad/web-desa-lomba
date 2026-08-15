@@ -31,7 +31,7 @@ export function Section({
 }: React.ComponentProps<"section"> & {
   latar?: Latar;
   ritme?: Ritme;
-  /** Garis kontur melintang di atas seksi — perubahan seksi dibaca
+  /** Garis kontur melintang di atas seksi. Perubahan seksi dibaca
    *  sebagai perubahan ketinggian, bukan sekadar garis pemisah. */
   batas?: boolean;
 }) {

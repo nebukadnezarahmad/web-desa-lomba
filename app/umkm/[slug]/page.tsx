@@ -59,7 +59,7 @@ export default async function HalamanProduk(props: PageProps<"/umkm/[slug]">) {
           <ProdukThumb
             kategori={produk.kategori}
             foto={produk.foto}
-            alt={`${produk.nama} — ${produk.usaha}`}
+            alt={`${produk.nama}, ${produk.usaha}`}
             ukuran="besar"
           />
         </div>
@@ -163,7 +163,7 @@ export default async function HalamanProduk(props: PageProps<"/umkm/[slug]">) {
                   <ProdukThumb
                     kategori={p.kategori}
                     foto={p.foto}
-                    alt={`${p.nama} — ${p.usaha}`}
+                    alt={`${p.nama}, ${p.usaha}`}
                   />
                   <div className="flex flex-1 flex-col p-5">
                     <h3 className="text-[0.9375rem] font-bold text-ink transition-colors group-hover:text-green-strong">

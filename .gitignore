@@ -1,5 +1,3 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # dependencies
 /node_modules
 /.pnp
@@ -30,7 +28,7 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
+# env
 .env*
 
 # vercel
@@ -40,16 +38,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Perkakas agen — bukan bagian dari website, dipasang terpisah di mesin lokal
-/ECC
-/.agents
-/.claude
-/skills-lock.json
-
-# Catatan pribadi — tetap di mesin lokal, tidak diunggah
+# catatan pribadi, tidak diunggah
 /RINGKASAN_DISKUSI_WEBSITE_DESA.md
 /INSTALLED_SKILLS_200K_SUMMARY.md
-
-# Berkas instruksi agen buatan Next.js — jangan ikut ke repo
-/AGENTS.md
-/CLAUDE.md

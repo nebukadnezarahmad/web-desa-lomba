@@ -16,8 +16,8 @@ import { cn } from "@/lib/utils";
  * satu ketukan ibu jari, tanpa membuka menu dulu. Di layar besar
  * digantikan navigasi atas pada SiteHeader.
  *
- * Sengaja tetap 5 tujuan inti (bukan menambahkan Lapor di sini) —
- * di lebar layar HP, enam tujuan terasa sesak. Lapor tetap mudah
+ * Sengaja tetap 5 tujuan inti (bukan menambahkan Lapor di sini).
+ * Di lebar layar HP, enam tujuan terasa sesak. Lapor tetap mudah
  * dijangkau lewat CTA utama di beranda dan menu atas versi desktop.
  */
 const tab = [

@@ -182,7 +182,7 @@ export const visiMisi = {
 };
 
 export const sejarahDesa = [
-  "Desa Tegalrejo berada di lereng Gunung Sindoro, pada ketinggian sekitar 1.300 meter di atas permukaan laut. Namanya berasal dari bahasa Jawa, tegal dan rejo, yang berarti ladang yang ramai — gambaran wilayah yang sejak lama hidup dari mengolah tanah.",
+  "Desa Tegalrejo berada di lereng Gunung Sindoro, pada ketinggian sekitar 1.300 meter di atas permukaan laut. Namanya berasal dari bahasa Jawa, tegal dan rejo, yang berarti ladang yang ramai, gambaran wilayah yang sejak lama hidup dari mengolah tanah.",
   "Wilayahnya seluas 891 hektar dan terbagi dalam empat dusun: Krajan, Banjaran, Jumprit, dan Tegalsari. Hanya sekitar 20 hektar berupa sawah; sisanya tegalan dan kebun yang mengikuti kontur lereng.",
   "Di wilayah desa terdapat Umbul Jumprit, mata air di kaki Gunung Sindoro yang menjadi hulu Sungai Progo dan tidak pernah kering meski kemarau panjang. Setiap tahun airnya diambil untuk prosesi menjelang Waisak, lalu dikirim ke Candi Mendut dan Borobudur.",
   "Seperti umumnya desa di lereng Sindoro, tembakau, kopi, dan sayuran dataran tinggi menjadi tumpuan utama warga. Sejak awal 2010-an, kelompok perempuan desa mulai mengolah hasil kebun menjadi produk kemasan, yang tumbuh menjadi puluhan usaha mikro yang kini terdaftar di lapak UMKM desa.",

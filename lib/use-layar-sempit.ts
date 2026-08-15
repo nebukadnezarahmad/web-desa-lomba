@@ -16,7 +16,7 @@ function langgan(panggil: () => void) {
  * (jumlah tick, tinggi kanvas, tampil-tidaknya legenda).
  *
  * useSyncExternalStore dipakai supaya aman terhadap render serentak dan
- * tidak menimbulkan ketidakcocokan hidrasi — di server selalu false,
+ * tidak menimbulkan ketidakcocokan hidrasi: di server selalu false,
  * lalu menyesuaikan setelah terpasang di peramban.
  */
 export function useLayarSempit(): boolean {

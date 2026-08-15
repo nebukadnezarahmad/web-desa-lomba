@@ -2,7 +2,7 @@ import "server-only";
 import { createClient } from "@supabase/supabase-js";
 
 /**
- * Klien Supabase dengan service_role key — akses penuh, melewati RLS.
+ * Klien Supabase dengan service_role key (akses penuh, melewati RLS).
  * HANYA untuk kode admin yang sudah dilindungi middleware sesi. Import
  * "server-only" membuat bundler gagal build kalau file ini pernah
  * ter-import dari komponen client secara tidak sengaja.

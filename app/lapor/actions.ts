@@ -52,7 +52,7 @@ export async function kirimLaporan(
 
     if (!error) return { berhasil: true, kodeLacak };
     if (error.code !== "23505") {
-      // Bukan pelanggaran unique constraint — tidak ada gunanya diulang.
+      // Bukan pelanggaran unique constraint, jadi tidak ada gunanya diulang.
       return {
         berhasil: false,
         pesan: "Laporan gagal dikirim. Coba lagi sebentar lagi.",

@@ -23,7 +23,7 @@ const rasioKelas: Record<NonNullable<FotoDesaProps["rasio"]>, string> = {
 };
 
 /**
- * Slot foto sungguhan warga/lokasi desa — pengganti ilustrasi ikon.
+ * Slot foto sungguhan warga/lokasi desa, pengganti ilustrasi ikon.
  * Sengaja TIDAK menampilkan ikon dekoratif sebagai isian ketika src kosong:
  * kartu kosong dengan label jujur "Foto belum ditambahkan" lebih baik
  * daripada ilustrasi yang berpura-pura jadi foto. Lihat public/foto/README.md
@@ -41,7 +41,7 @@ export function FotoDesa({
     return (
       <div
         role="img"
-        aria-label={`${alt} — foto belum ditambahkan`}
+        aria-label={`${alt}, foto belum ditambahkan`}
         className={cn(
           "flex flex-col items-center justify-center gap-2 border border-dashed border-line-strong bg-surface-soft text-center",
           rasioKelas[rasio],

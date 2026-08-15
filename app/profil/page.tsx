@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 const totalKk = daftarRt.reduce((n, r) => n + r.kk, 0);
 const totalWarga = daftarRt.reduce((n, r) => n + r.warga, 0);
 
-/** Inisial untuk avatar — pengganti foto yang belum tersedia. */
+/** Inisial untuk avatar, pengganti foto yang belum tersedia. */
 function inisial(nama: string) {
   return nama
     .split(" ")
@@ -184,7 +184,7 @@ export default function HalamanProfil() {
           deskripsi={`${formatAngka(totalKk)} kepala keluarga tersebar di ${desa.jumlahRt} RT dan ${desa.jumlahRw} RW.`}
         />
 
-        {/* Mobile: kartu per RT — tidak perlu geser samping */}
+        {/* Mobile: kartu per RT, tidak perlu geser samping */}
         <ul className="flex flex-col gap-2.5 lg:hidden">
           {daftarRt.map((r) => (
             <li
@@ -358,7 +358,7 @@ export default function HalamanProfil() {
 
         <div className="mt-6">
           <Badge tone="netral">
-            Purwarupa — data pada halaman ini bersifat fiktif
+            Purwarupa: data pada halaman ini bersifat fiktif
           </Badge>
         </div>
       </Section>

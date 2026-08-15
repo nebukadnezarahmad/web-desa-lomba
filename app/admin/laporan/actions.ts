@@ -24,7 +24,7 @@ export async function ubahStatusLaporan(
   _sebelumnya: HasilUbahStatus,
   formData: FormData,
 ): Promise<HasilUbahStatus> {
-  // Diverifikasi ulang di sini (bukan cuma di proxy.ts) — pertahanan
+  // Diverifikasi ulang di sini (bukan cuma di proxy.ts). Pertahanan
   // berlapis kalau suatu saat action ini dipanggil dari jalur lain.
   if (!(await sesiAdminValid())) {
     return { berhasil: false, pesan: "Sesi berakhir. Masuk kembali." };

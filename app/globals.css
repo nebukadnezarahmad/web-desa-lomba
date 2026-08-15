@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ============================================================
-   BALAI — Design System "Civic Bright"
+   BALAI: Design System "Civic Bright"
    Kanvas putih dominan. Hijau = tindakan & pertumbuhan.
    Biru = informasi & layanan. Tidak dicampur sembarangan.
    ============================================================ */
@@ -12,19 +12,19 @@
   --surface-soft: #f6faf7;
   --surface-tint: #f1f8fe;
 
-  /* Hijau daun — tindakan, pertumbuhan, lingkungan, kesehatan */
+  /* Hijau daun: tindakan, pertumbuhan, lingkungan, kesehatan */
   --green: #16a34a;
   --green-strong: #15803d;
   --green-deep: #14532d;
   --green-soft: #dcfce7;
 
-  /* Biru cerah — informasi, pengumuman, layanan administrasi */
+  /* Biru cerah: informasi, pengumuman, layanan administrasi */
   --blue: #0ea5e9;
   --blue-strong: #0369a1;
   --blue-deep: #0c4a6e;
   --blue-soft: #e0f2fe;
 
-  /* Teks & garis — tiga tingkat, semuanya lolos WCAG AA (>= 4.5:1 di atas putih) */
+  /* Teks & garis. Tiga tingkat, semuanya lolos WCAG AA (>= 4.5:1 di atas putih) */
   --ink: #111827; /* 17.7:1 */
   --ink-muted: #4b5563; /* 7.6:1 */
   --ink-faint: #6b7280; /* 4.8:1 */
@@ -38,14 +38,14 @@
 
   --radius: 0.75rem;
 
-  /* Gerak — dua tingkat saja, jangan lebih.
+  /* Gerak dibatasi dua tingkat saja, jangan lebih.
      Cepat untuk mikro-interaksi yang harus terasa langsung di jari;
      tenang untuk elemen yang masuk layar. */
   --ease-out-quint: cubic-bezier(0.16, 1, 0.3, 1);
   --gerak-cepat: 180ms;
   --gerak-tenang: 520ms;
 
-  /* Ritme vertikal — tiga tingkat, dipakai bergantian supaya halaman
+  /* Ritme vertikal: tiga tingkat, dipakai bergantian supaya halaman
      tidak terbaca seperti daftar kotak berjarak sama. */
   --ritme-rapat: clamp(2.5rem, 1.75rem + 2.5vw, 3.75rem);
   --ritme-normal: clamp(3rem, 2.25rem + 3.5vw, 5.5rem);
@@ -81,7 +81,7 @@
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-bricolage), var(--font-jakarta), ui-sans-serif, sans-serif;
 
-  /* Radius bertingkat — kartu kecil lebih tajam, panel besar lebih lunak.
+  /* Radius bertingkat. Kartu kecil lebih tajam, panel besar lebih lunak.
      Radius seragam di segala ukuran membuat semuanya terlihat sederajat. */
   --radius-chip: 0.625rem;
   --radius-card: 0.875rem;
@@ -105,7 +105,7 @@ body {
 
 /* Judul besar memakai huruf display; judul kecil tetap Jakarta supaya
    tidak berebut perhatian dengan isi. Pembagiannya di kelas, bukan di
-   elemen — h3 di dalam kartu tidak sepatutnya sekeras h1 di hero. */
+   elemen. H3 di dalam kartu tidak sepatutnya sekeras h1 di hero. */
 h1,
 h2,
 h3,
@@ -122,7 +122,7 @@ h4 {
   line-height: 1.02;
 }
 
-/* Eyebrow / kicker — huruf kecil berjarak lebar. Menandai jenis isi,
+/* Eyebrow / kicker: huruf kecil berjarak lebar. Menandai jenis isi,
    bukan hiasan: tiap seksi punya satu, dan warnanya mengikuti peran
    hijau/biru yang sudah ditetapkan. */
 .kicker {
@@ -142,7 +142,7 @@ p {
   text-wrap: pretty;
 }
 
-/* Fokus keyboard selalu terlihat — syarat aksesibilitas */
+/* Fokus keyboard selalu terlihat (syarat aksesibilitas) */
 :focus-visible {
   outline: 2px solid var(--green-strong);
   outline-offset: 2px;
@@ -168,10 +168,10 @@ p {
   background-size: 560px 560px;
 }
 
-/* ---------- Pita elevasi — tanda tangan situs ini ----------
+/* ---------- Pita elevasi: tanda tangan situs ini ----------
    Desa Tegalrejo duduk di 1.300 mdpl di lereng Sindoro. Dari 891 hektar,
    hanya 20 berupa sawah; sisanya tegalan yang mengikuti kontur lereng.
-   Garis kontur di sini bukan ornamen — itu bentuk tanahnya sendiri.
+   Garis kontur di sini bukan ornamen, melainkan bentuk tanahnya sendiri.
    Pita bertingkat ini membaca sebagai penampang lereng, dari kaki
    (hijau pekat) ke puncak (hampir putih). */
 
@@ -192,7 +192,7 @@ p {
     );
 }
 
-/* Garis kontur tipis di batas tiap pita — penanda ketinggian, bukan garis
+/* Garis kontur tipis di batas tiap pita: penanda ketinggian, bukan garis
    pemisah biasa. Sengaja tidak sampai tepi kanan supaya terbaca sebagai
    garis peta yang terpotong bingkai, bukan border kotak. */
 .garis-elevasi {
@@ -292,7 +292,7 @@ p {
   }
 }
 
-/* ---------- Kalender sobekan — tepi robek buatan CSS ---------- */
+/* ---------- Kalender sobekan (tepi robek buatan CSS) ---------- */
 
 .tepi-sobek {
   clip-path: polygon(

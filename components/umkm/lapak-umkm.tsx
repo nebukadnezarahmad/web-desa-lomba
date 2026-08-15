@@ -125,7 +125,7 @@ export function LapakUmkm() {
                 <ProdukThumb
                   kategori={p.kategori}
                   foto={p.foto}
-                  alt={`${p.nama} — ${p.usaha}`}
+                  alt={`${p.nama}, ${p.usaha}`}
                 />
                 <div className="flex flex-1 flex-col p-5">
                   <Badge

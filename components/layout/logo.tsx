@@ -1,7 +1,7 @@
 import { desa } from "@/lib/data/desa";
 
 /**
- * Lambang Balai — atap balai desa di atas garis kontur.
+ * Lambang Balai: atap balai desa di atas garis kontur.
  * Dua warna: hijau (tanah/tumbuh) dan biru (layanan).
  */
 export function Logo({ className }: { className?: string }) {

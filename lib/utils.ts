@@ -6,7 +6,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 /**
- * Sengaja TIDAK memakai `style: "currency"` — versi ICU Node.js (server)
+ * Sengaja TIDAK memakai `style: "currency"`. Versi ICU Node.js (server)
  * dan browser (client) bisa beda soal spasi antara "Rp" dan angkanya,
  * menyebabkan hydration mismatch. Format angka biasa lalu tempel "Rp"
  * sendiri supaya hasilnya pasti sama di server maupun client.

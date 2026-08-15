@@ -50,7 +50,7 @@ export function JadwalSampah() {
           <SelectContent>
             {jadwalSampah.map((j) => (
               <SelectItem key={j.rt} value={j.rt}>
-                {j.rt} — Dusun {j.dusun}
+                {j.rt}, Dusun {j.dusun}
               </SelectItem>
             ))}
           </SelectContent>
@@ -92,7 +92,7 @@ export function JadwalSampah() {
                     )}
                   >
                     {h}
-                    {angkut && <span className="sr-only"> — hari angkut</span>}
+                    {angkut && <span className="sr-only">, hari angkut</span>}
                   </li>
                 );
               })}

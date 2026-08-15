@@ -29,7 +29,7 @@ export default function HalamanKesehatan() {
         deskripsi="Perawakan pendek terbentuk perlahan dan paling mudah dicegah sebelum anak berusia dua tahun. Halaman ini membantu orang tua dan kader mengenali tandanya lebih awal, lalu tahu ke mana harus melangkah."
       />
 
-      {/* Kalkulator — fitur unggulan */}
+      {/* Kalkulator, fitur unggulan */}
       <Section latar="putih" id="kalkulator" className="scroll-mt-20">
         <SectionHeading
           kicker="Alat Penapisan"

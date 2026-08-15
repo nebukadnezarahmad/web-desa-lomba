@@ -4,7 +4,7 @@ import { NAMA_COOKIE, tokenSesiValid } from "@/lib/admin/sesi";
 
 /**
  * Melindungi seluruh /admin/* kecuali /admin/login. Next.js 16 mengganti
- * nama konvensi middleware.ts menjadi proxy.ts — lihat catatan revisi
+ * nama konvensi middleware.ts menjadi proxy.ts. Lihat catatan revisi
  * bundled docs, bukan dugaan dari data latih.
  */
 export async function proxy(request: NextRequest) {

@@ -7,8 +7,8 @@
  *   z = ln(X / M) / S                  bila L = 0
  *
  * Dua indeks yang dihitung:
- *   TB/U — Tinggi Badan menurut Umur  -> menapis perawakan pendek (stunting)
- *   BB/U — Berat Badan menurut Umur   -> menapis berat badan kurang
+ *   TB/U: Tinggi Badan menurut Umur  -> menapis perawakan pendek (stunting)
+ *   BB/U: Berat Badan menurut Umur   -> menapis berat badan kurang
  *
  * Ini alat penapisan untuk kader posyandu, bukan alat diagnosis.
  */
@@ -141,7 +141,7 @@ export type HasilIndeks = {
   waspada: boolean;
 };
 
-/** TB/U — ambang batas Permenkes No. 2 Tahun 2020 */
+/** TB/U: ambang batas Permenkes No. 2 Tahun 2020 */
 function klasifikasiTbu(z: number, median: number): HasilIndeks {
   const dasar = {
     kode: "TB/U" as const,
@@ -185,7 +185,7 @@ function klasifikasiTbu(z: number, median: number): HasilIndeks {
   };
 }
 
-/** BB/U — ambang batas Permenkes No. 2 Tahun 2020 */
+/** BB/U: ambang batas Permenkes No. 2 Tahun 2020 */
 function klasifikasiBbu(z: number, median: number): HasilIndeks {
   const dasar = {
     kode: "BB/U" as const,

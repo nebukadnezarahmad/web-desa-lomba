@@ -61,7 +61,7 @@ export function FormLaporan() {
             </h3>
             <p className="mt-1.5 text-[0.9375rem] leading-relaxed text-ink">
               Simpan kode ini untuk memantau tindak lanjutnya. Kode tidak
-              dikirim ulang lewat cara lain — dicatat sendiri saja.
+              dikirim ulang lewat cara lain, jadi dicatat sendiri saja.
             </p>
           </div>
         </div>

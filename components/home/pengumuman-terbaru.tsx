@@ -8,7 +8,7 @@ import { pengumumanTerbaru } from "@/lib/data/pengumuman";
 import { formatTanggal } from "@/lib/utils";
 
 export function PengumumanTerbaru() {
-  // Ritme rapat — ini cuplikan tiga kabar, bukan bacaan panjang.
+  // Ritme rapat, ini cuplikan tiga kabar, bukan bacaan panjang.
   return (
     <Section latar="putih" ritme="rapat">
       <SectionHeading

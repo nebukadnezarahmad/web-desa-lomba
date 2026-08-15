@@ -162,7 +162,7 @@ export function GrafikTumbuh() {
           </ResponsiveContainer>
         </div>
 
-        {/* Keterangan buatan sendiri di layar sempit — lebih ringkas
+        {/* Keterangan buatan sendiri di layar sempit, lebih ringkas
             daripada legenda bawaan yang melipat jadi dua baris. */}
         {sempit && (
           <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-2 border-t border-line pt-3">

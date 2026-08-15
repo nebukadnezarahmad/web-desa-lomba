@@ -4,7 +4,7 @@ const UMUR_SESI_DETIK = 60 * 60 * 8; // 8 jam
 /**
  * Sesi admin sederhana: satu kata sandi bersama (ADMIN_PASSWORD), bukan
  * sistem akun per-orang. Wajar untuk satu "petugas desa" yang mengelola
- * laporan — bukan situs dengan banyak pengguna berbeda peran.
+ * laporan, bukan situs dengan banyak pengguna berbeda peran.
  *
  * Token = base64url(payload).base64url(tandaTanganHMAC-SHA256).
  * Pakai Web Crypto (crypto.subtle) supaya jalan sama persis di middleware

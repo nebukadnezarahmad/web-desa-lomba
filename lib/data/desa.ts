@@ -1,5 +1,5 @@
 /**
- * Identitas desa — sumber tunggal. Ganti di sini untuk rebrand; seluruh
+ * Identitas desa, sumber tunggal. Ganti di sini untuk rebrand; seluruh
  * halaman, metadata, dan data contoh ikut menyesuaikan.
  *
  * MANA YANG DATA ASLI, MANA YANG ISIAN SEMENTARA
@@ -11,12 +11,12 @@
  *   dan statistikDesa jumlah warga (2.958) + kepala keluarga (897).
  *   Sumber: situs resmi desa, Wikipedia, dan data kecamatan.
  *
- * Isian sementara — JANGAN dikutip sebagai data resmi:
+ * Isian sementara, JANGAN dikutip sebagai data resmi:
  *   telepon dan email sengaja diisi nomor/alamat karangan, bukan kontak
  *   asli perangkat desa, supaya warga tidak menghubungi petugas
  *   sungguhan soal pengumuman yang isinya masih contoh.
  *   Nama dusun, sebaran warga dan KK per RT di daftarRt, jumlah UMKM,
- *   dan jumlah posyandu juga masih karangan — angka totalnya saja yang
+ *   dan jumlah posyandu juga masih karangan. Angka totalnya saja yang
  *   dicocokkan dengan data asli.
  */
 export const desa = {
@@ -46,7 +46,7 @@ export const statistikDesa = [
 ] as const;
 
 /**
- * Empat dusun, tujuh RW, dua puluh delapan RT — jumlahnya mengikuti data
+ * Empat dusun, tujuh RW, dua puluh delapan RT. Jumlahnya mengikuti data
  * asli desa. Nama dusun serta sebaran warga dan KK per RT masih karangan;
  * totalnya saja yang pas dengan angka resmi (2.958 jiwa, 897 KK).
  */

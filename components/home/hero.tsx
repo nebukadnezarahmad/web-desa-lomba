@@ -87,7 +87,7 @@ export function Hero() {
             </ul>
           </div>
 
-          {/* Denyut Desa — penampang lereng.
+          {/* Denyut Desa: penampang lereng.
               Angkanya data asli; yang dirancang adalah cara membacanya.
               Desa ini duduk di 1.300 mdpl di lereng Sindoro, jadi datanya
               disusun menaik seperti tegalan yang menapak kontur: warga di
@@ -127,7 +127,7 @@ export function Hero() {
 
             <p className="relative mt-5 border-t border-green/15 px-6 py-5 text-[0.8125rem] leading-relaxed text-ink-muted sm:px-8">
               {desa.luasWilayah}, {desa.jumlahDusun} dusun, {desa.jumlahRt} RT.
-              Hanya 20 hektar berupa sawah — sisanya tegalan dan kebun yang
+              Hanya 20 hektar berupa sawah, sisanya tegalan dan kebun yang
               mengikuti kontur lereng.
             </p>
           </figure>

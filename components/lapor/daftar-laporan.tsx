@@ -21,8 +21,8 @@ const gayaStatus: Record<
 
 /**
  * Daftar laporan yang sudah ditinjau petugas. Fungsi daftar_laporan_publik()
- * di Supabase hanya mengembalikan kolom yang aman — tanpa nama pelapor,
- * kontak, maupun kode lacak — dan menyembunyikan laporan berstatus
+ * di Supabase hanya mengembalikan kolom yang aman (tanpa nama pelapor,
+ * kontak, maupun kode lacak) dan menyembunyikan laporan berstatus
  * "menunggu" serta "ditolak".
  *
  * Halaman yang memuat komponen ini wajib force-dynamic, kalau tidak querynya

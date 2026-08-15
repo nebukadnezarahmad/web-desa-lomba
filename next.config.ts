@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Cegah Next.js membuat ulang AGENTS.md / CLAUDE.md di akar proyek
+  // Matikan berkas panduan yang dibuat otomatis Next.js di akar proyek.
   agentRules: false,
 
   async redirects() {

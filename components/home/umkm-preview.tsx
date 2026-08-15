@@ -9,9 +9,9 @@ import { FotoDesa } from "@/components/shared/foto-desa";
 import { produkUmkm, produkUnggulan } from "@/lib/data/umkm";
 import { formatRupiah } from "@/lib/utils";
 
-// Produk Bu Marni yang sama disebut di headline beranda — sengaja ditautkan
+// Produk Bu Marni yang sama disebut di headline beranda, sengaja ditautkan
 // supaya klaim di hero terasa nyata, bukan angan-angan copywriting.
-/* Utamakan produk unggulan yang sudah punya foto — kartu sorotan ini paling
+/* Utamakan produk unggulan yang sudah punya foto. Kartu sorotan ini paling
    besar di beranda, jadi paling terasa kalau isinya cuma ilustrasi ikon. */
 const sorotan = produkUnggulan.find((p) => p.foto) ?? produkUnggulan[0];
 const lainnya = produkUmkm.filter((p) => p.slug !== sorotan.slug).slice(0, 3);
@@ -35,7 +35,7 @@ export function UmkmPreview() {
         }
       />
 
-      {/* Bento tidak seragam — satu produk disorot besar dengan slot foto asli,
+      {/* Bento tidak seragam: satu produk disorot besar dengan slot foto asli,
           bukan kartu berukuran sama seperti tiga lainnya. */}
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         <Reveal
@@ -48,7 +48,7 @@ export function UmkmPreview() {
           >
             <FotoDesa
               src={sorotan.foto}
-              alt={`${sorotan.nama} — ${sorotan.usaha}`}
+              alt={`${sorotan.nama}, ${sorotan.usaha}`}
               rasio="lanskap"
             />
             <div className="flex flex-1 flex-col p-6">
@@ -83,7 +83,7 @@ export function UmkmPreview() {
               <ProdukThumb
                 kategori={p.kategori}
                 foto={p.foto}
-                alt={`${p.nama} — ${p.usaha}`}
+                alt={`${p.nama}, ${p.usaha}`}
               />
               <div className="flex flex-1 flex-col p-5">
                 <Badge

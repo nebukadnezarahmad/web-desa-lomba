@@ -16,7 +16,7 @@ export type Produk = {
   unggulan?: boolean;
   /**
    * Nama berkas di public/foto. Kosongkan bila belum ada foto yang benar-benar
-   * menggambarkan produknya — ProdukThumb akan memakai ilustrasi kategori.
+   * menggambarkan produknya. ProdukThumb akan memakai ilustrasi kategori.
    * Lebih baik ilustrasi daripada foto yang salah barang.
    */
   foto?: string;
@@ -52,7 +52,7 @@ export const produkUmkm: Produk[] = [
     harga: 32000,
     satuan: "toples 500 g",
     deskripsi:
-      "Gula aren kristal murni, disadap sendiri dari pohon aren di lereng timur desa — tanpa campuran gula pasir sama sekali, warna dan aromanya asli dari nira.",
+      "Gula aren kristal murni, disadap sendiri dari pohon aren di lereng timur desa, tanpa campuran gula pasir sama sekali. Warna dan aromanya asli dari nira.",
     detail: [
       "Nira aren disadap setiap pagi dan sore, lalu dimasak hari itu juga tanpa jeda agar tidak berubah asam. Proses pengkristalan dilakukan manual dengan pengadukan tangan.",
       "Tidak menggunakan campuran gula pasir maupun pemutih. Warna cokelat pekat dan aroma karamel yang kuat berasal murni dari nira.",
@@ -92,7 +92,7 @@ export const produkUmkm: Produk[] = [
     harga: 285000,
     satuan: "lembar 2 m",
     deskripsi:
-      "Batik tulis motif bulir padi dan garis kontur sawah, dikerjakan penuh dengan canting tangan oleh kelompok perajin ibu-ibu desa — bukan cap, bukan printing, satu lembar butuh sekitar sepuluh hari kerja.",
+      "Batik tulis motif bulir padi dan garis kontur sawah, dikerjakan penuh dengan canting tangan oleh kelompok perajin ibu-ibu desa, bukan cap dan bukan printing. Satu lembar butuh sekitar sepuluh hari kerja.",
     detail: [
       "Motif dikembangkan kelompok perajin desa dengan mengambil bentuk bulir padi dan garis kontur persawahan sebagai penanda identitas Tegalrejo.",
       "Seluruh proses dikerjakan dengan canting tangan di atas kain katun primisima, membutuhkan waktu sekitar sepuluh hari per lembar.",
@@ -152,7 +152,7 @@ export const produkUmkm: Produk[] = [
     harga: 75000,
     satuan: "kunjungan",
     deskripsi:
-      "Servis traktor tangan, pompa air, dan mesin perontok padi — teknisi datang langsung ke rumah, termasuk panggilan darurat saat musim tanam dan panen sedang ramai-ramainya.",
+      "Servis traktor tangan, pompa air, dan mesin perontok padi. Teknisi datang langsung ke rumah, termasuk panggilan darurat saat musim tanam dan panen sedang ramai-ramainya.",
     detail: [
       "Melayani perbaikan traktor tangan, pompa air, mesin perontok padi, dan mesin pemotong rumput. Teknisi datang ke lokasi di seluruh wilayah desa.",
       "Tarif kunjungan sudah termasuk pemeriksaan menyeluruh dan penyetelan ringan. Biaya suku cadang dihitung terpisah dan disampaikan sebelum penggantian.",

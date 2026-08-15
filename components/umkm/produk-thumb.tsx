@@ -40,7 +40,7 @@ const gaya: Record<
 
 /**
  * Menampilkan foto produk bila tersedia. Kalau belum ada foto yang benar-benar
- * menggambarkan barangnya, jatuh ke ilustrasi ikon per kategori — lebih baik
+ * menggambarkan barangnya, jatuh ke ilustrasi ikon per kategori: lebih baik
  * ilustrasi yang jujur daripada foto stok yang salah barang.
  */
 export function ProdukThumb({

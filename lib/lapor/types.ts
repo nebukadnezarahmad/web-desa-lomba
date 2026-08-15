@@ -43,8 +43,8 @@ export type Laporan = {
   updated_at: string;
 };
 
-/** Bentuk baris hasil dari fungsi cek_status_laporan & daftar_laporan_publik —
- * sengaja tidak menyertakan nama_pelapor/kontak/kode_lacak. */
+/** Bentuk baris hasil dari fungsi cek_status_laporan & daftar_laporan_publik.
+ * Sengaja tidak menyertakan nama_pelapor/kontak/kode_lacak. */
 export type StatusLaporanPublik = Pick<
   Laporan,
   | "kategori"

@@ -46,7 +46,7 @@ export function KartuLaporanAdmin({ laporan }: { laporan: Laporan }) {
   const [konfirmHapus, setKonfirmHapus] = useState(false);
 
   // Status & catatan dikontrol manual (bukan defaultValue) supaya tampilan
-  // ikut memperbarui diri setelah simpan berhasil — React mereset field
+  // ikut memperbarui diri setelah simpan berhasil. React mereset field
   // form yang tak terkontrol begitu sebuah form action selesai.
   const [status, setStatus] = useState<StatusLaporan>(laporan.status);
   const [catatan, setCatatan] = useState(laporan.catatan_admin ?? "");

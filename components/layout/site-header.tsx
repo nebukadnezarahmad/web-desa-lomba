@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 
 /**
  * Di layar besar: navigasi lengkap di atas.
- * Di layar kecil: hanya identitas + pintasan layanan — navigasi utama
+ * Di layar kecil: hanya identitas + pintasan layanan. Navigasi utama
  * ditangani BottomNav supaya terjangkau ibu jari.
  */
 export function SiteHeader() {

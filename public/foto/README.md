@@ -8,13 +8,14 @@ Untuk produk UMKM, isi kolom `foto` di `lib/data/umkm.ts`.
 
 ## Aturan
 
-1. **Foto harus benar-benar menggambarkan barangnya.** Kalau tidak ada yang
-   cocok, kosongkan saja — `ProdukThumb` otomatis memakai ilustrasi ikon per
-   kategori. Ilustrasi yang jujur lebih baik daripada foto yang salah barang.
-2. Foto bertanda "Unsplash" bebas dipakai termasuk untuk keperluan komersial,
-   tanpa kewajiban mencantumkan atribusi. Foto bertanda "pemilik usaha" dikirim
-   langsung oleh pemilik lewat WhatsApp — lebih diutamakan karena barangnya asli,
-   bukan stok generik.
+1. **Foto harus benar-benar menggambarkan barangnya.** Kalau belum ada yang
+   cocok, kosongkan saja. `ProdukThumb` otomatis memakai ilustrasi ikon per
+   kategori, dan ilustrasi yang jujur lebih baik daripada foto yang salah
+   barang.
+2. Foto bertanda Unsplash bebas dipakai termasuk untuk keperluan komersial,
+   tanpa kewajiban mencantumkan atribusi. Foto bertanda "pemilik usaha"
+   dikirim langsung oleh yang punya usaha lewat WhatsApp. Yang begini lebih
+   diutamakan karena barangnya memang barang aslinya, bukan stok generik.
 3. Ganti dengan foto asli dari pemilik usaha begitu tersedia.
 
 ## Daftar berkas
@@ -37,28 +38,24 @@ Untuk produk UMKM, isi kolom `foto` di `lib/data/umkm.ts`.
 
 Tautan foto Unsplash: `https://unsplash.com/photos/<ID>`
 
-## Semua produk sudah punya foto
+## Catatan kecocokan
 
-Tidak ada lagi yang memakai ilustrasi ikon. Kandidat yang pernah dicoba dan
-ditolak karena salah barang sebelum foto yang cocok ditemukan: tahu goreng
-utuh untuk keripik tempe, sekam padi untuk beras merah versi lama.
+Semua produk sudah punya foto, jadi tidak ada lagi yang jatuh ke ilustrasi
+ikon. Beberapa kandidat sempat ditolak dulu karena salah barang: tahu goreng
+utuh untuk keripik tempe, dan sekam padi untuk beras merah.
 
-Catatan transparansi — beberapa foto tidak 100% cocok dengan deskripsi teks
-tapi tetap dipasang karena masih jauh lebih baik daripada ilustrasi ikon:
+Tiga foto di bawah ini tidak seratus persen pas dengan teks produknya, tapi
+tetap dipakai karena masih jauh lebih baik daripada ilustrasi ikon:
 
-- `peyek-kacang.jpg` tidak memperlihatkan rebon (udang kering) secara jelas,
-  hanya kacang — dipasang atas persetujuan eksplisit meski nama produknya
-  "Peyek Kacang **dan Rebon**".
-- `servis-mesin.jpg` menampilkan montir membetulkan alat berat/truk, bukan
-  spesifik mesin pertanian (traktor tangan, pompa air) — sama, dipasang atas
-  persetujuan eksplisit.
-- `batik-tulis-padi.jpg` foto arsip kain batik tulis asli koleksi museum
-  (motif "Parang Rusak Barong", 1891, CC0) — batiknya asli dan tulisan
-  tangan, tapi motifnya bukan "bulir padi dan garis kontur sawah" seperti
-  yang dideskripsikan di teks produk. Dipilih karena warna coklat tua/nila
-  gelapnya paling dekat dengan deskripsi pewarna alam (kulit mahoni + indigo).
-- `keripik-tempe.jpg` cocok baik — tempe tipis bulat digoreng renyah dengan
-  cabai dan ketumbar (rempah) di sekitarnya.
+- `peyek-kacang.jpg` cuma memperlihatkan kacang, rebonnya tidak kelihatan
+  jelas, padahal nama produknya "Peyek Kacang dan Rebon".
+- `servis-mesin.jpg` menampilkan montir sedang membetulkan alat berat, bukan
+  mesin pertanian seperti traktor tangan atau pompa air.
+- `batik-tulis-padi.jpg` adalah foto arsip kain batik tulis koleksi museum
+  (motif Parang Rusak Barong, 1891, lisensi CC0). Kainnya memang batik tulis
+  asli, tapi motifnya bukan bulir padi dan garis kontur sawah seperti yang
+  ditulis di deskripsi produk. Dipilih karena warna coklat tua dan nila
+  gelapnya paling dekat dengan deskripsi pewarna alam kulit mahoni dan indigo.
 
 ## Yang masih perlu difoto sendiri
 

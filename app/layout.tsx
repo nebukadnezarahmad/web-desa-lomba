@@ -6,7 +6,7 @@ import { BottomNav } from "@/components/layout/bottom-nav";
 import { desa } from "@/lib/data/desa";
 import "./globals.css";
 
-// Plus Jakarta Sans — tipografi identitas kota Jakarta oleh Tokotype.
+// Plus Jakarta Sans, tipografi identitas kota Jakarta oleh Tokotype.
 // Huruf sipil Indonesia untuk situs sipil Indonesia. Menangani seluruh
 // teks isi, label, tombol, dan angka.
 const jakarta = Plus_Jakarta_Sans({
@@ -16,9 +16,9 @@ const jakarta = Plus_Jakarta_Sans({
   display: "swap",
 });
 
-// Bricolage Grotesque — grotesk utilitarian dengan sumbu optical size.
+// Bricolage Grotesque, grotesk utilitarian dengan sumbu optical size.
 // Dipakai TERBATAS: hanya judul besar. Wataknya mirip huruf papan
-// pengumuman balai desa — tegas dan sedikit kaku, bukan elegan. Itu yang
+// pengumuman balai desa: tegas dan sedikit kaku, bukan elegan. Itu yang
 // membedakannya dari serif display yang jadi refleks di mana-mana.
 const bricolage = Bricolage_Grotesque({
   variable: "--font-bricolage",
@@ -29,7 +29,7 @@ const bricolage = Bricolage_Grotesque({
 
 export const metadata: Metadata = {
   title: {
-    default: `${desa.merek} — ${desa.nama}`,
+    default: `${desa.merek} - ${desa.nama}`,
     template: `%s · ${desa.merek}`,
   },
   description: `${desa.tagline} Portal resmi ${desa.nama}, ${desa.kecamatan}, ${desa.kabupaten}. Pengumuman, agenda warga, lapak UMKM, layanan kesehatan, dan pengelolaan lingkungan.`,

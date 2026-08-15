@@ -33,7 +33,7 @@ export function AgendaWarga() {
         {agendaMendatang.map((a, i) => (
           <Reveal as="li" key={a.judul} index={i}>
             <div className="group grid grid-cols-[5.5rem_1fr] items-start gap-5 border-b border-line py-7 transition-colors first:border-t first:border-line sm:grid-cols-[6.5rem_1fr] sm:gap-8">
-              {/* Sobekan kalender — motif yang beda sendiri dari kartu di bagian lain halaman */}
+              {/* Sobekan kalender, motif yang beda sendiri dari kartu di bagian lain halaman */}
               <div
                 className="relative w-full max-w-[5.5rem] justify-self-center pt-2 sm:max-w-[6.5rem]"
                 style={{ transform: `rotate(${kemiringan[i % kemiringan.length]})` }}
