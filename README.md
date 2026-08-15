@@ -1,117 +1,46 @@
-# Balai — Portal Desa Sukamaju
+# BALAI : Satu Pintu Layanan dan Informasi Warga Desa
 
-Portal desa multifungsi: pengumuman, agenda warga, lapak UMKM, pemantauan gizi
-balita, dan pengelolaan sampah dalam satu tempat.
+## Instansi
+Institut Teknologi PLN
 
-Purwarupa untuk lomba web design. Nama desa, warga, dan seluruh data di dalamnya
-bersifat fiktif.
+## Anggota Tim
+- Ketua : Muh. Raihan Huda Negara
+- Anggota 1: Nebukadnezar Ahmad
+- Anggota 2: Naufal Muttaqin
 
-## Menjalankan
+## Deskripsi Karya
 
-```bash
-npm run dev
-```
+Di banyak desa, informasi mengalir satu arah: pengumuman turun dari balai desa,
+warga tinggal membaca. Keluhan warga sendiri sering berhenti di obrolan warung
+atau grup WhatsApp RT, tidak pernah sampai tertangani secara tercatat. Warga baru
+yang ingin membuka usaha kecil tidak tahu ke mana harus menawarkan produknya
+selain dari mulut ke mulut. Orang tua balita bergantung penuh pada jadwal
+posyandu bulanan untuk tahu apakah tumbuh kembang anaknya baik-baik saja.
 
-Buka http://localhost:3000
+Balai dibangun untuk membalik arah itu. Website ini bukan etalase desa yang
+berisi sambutan kepala desa dan struktur organisasi yang jarang dibuka warga,
+melainkan alat kerja sehari-hari untuk hidup bertetangga: tempat warga melapor
+dan tahu laporannya ditindaklanjuti, tempat usaha rumahan tetangga bisa
+ditemukan, tempat jadwal kerja bakti dan posyandu terlihat oleh semua orang
+tanpa harus menunggu selebaran ditempel di pos ronda.
 
-Perintah lain:
+Fitur intinya adalah **Lapor Warga** — warga melaporkan masalah lingkungan
+(lampu jalan mati, saluran mampet, dan sejenisnya), petugas desa menanggapi dan
+memperbarui statusnya, dan warga bisa memantau tindak lanjutnya secara terbuka.
+Di sinilah subtema Hubungan Sosial paling terasa: bukan sekadar menyediakan
+informasi, tetapi membuka jalur komunikasi dua arah antara warga dan pengurus
+lingkungan yang selama ini sering terputus.
 
-```bash
-npm run build   # build produksi (27 halaman statis)
-npm run start   # jalankan hasil build
-npm run lint    # ESLint
-npx tsc --noEmit  # pemeriksaan tipe
-```
+Di luar itu, Balai juga menghadirkan lapak UMKM warga untuk menguatkan ekonomi
+tetangga, kalkulator status gizi anak berbasis Standar Antropometri Anak WHO
+(Permenkes No. 2 Tahun 2020) untuk mendukung pemantauan dini terhadap risiko
+stunting, jadwal pengelolaan sampah per RT, serta layanan administrasi yang
+jelas syarat dan estimasi waktunya sehingga warga tidak perlu bolak-balik ke
+balai desa hanya untuk bertanya.
 
-## Tumpukan Teknologi
+Seluruh data pada situs ini bersifat fiktif dan dibuat untuk keperluan purwarupa
+lomba. Nama desa, warga, dan perangkat desa yang ditampilkan tidak merujuk pada
+individu atau instansi nyata.
 
-| Bagian | Pilihan |
-|---|---|
-| Framework | Next.js 16 (App Router, Turbopack) |
-| Bahasa | TypeScript |
-| Gaya | Tailwind CSS v4 (`@theme` di `app/globals.css`) |
-| Komponen | Radix UI primitives, disusun sendiri dengan pola shadcn |
-| Ikon | Phosphor Icons (weight `duotone`) |
-| Grafik | Recharts |
-| Huruf | Plus Jakarta Sans |
-
-## Arah Desain — "Civic Bright"
-
-Kanvas putih dominan, hijau daun untuk **tindakan dan pertumbuhan**, biru cerah
-untuk **informasi dan layanan**. Pembagian peran warna ini dipegang konsisten di
-seluruh halaman — itu yang membuat tampilannya terlihat disengaja, bukan sekadar
-warna-warni.
-
-Elemen penanda: **garis kontur peta** sebagai latar hero dan pembatas antar
-bagian. Kontur = peta = tanah = desa.
-
-Tipografi memakai Plus Jakarta Sans, tipografi identitas kota Jakarta rancangan
-Tokotype — huruf sipil Indonesia untuk situs sipil Indonesia.
-
-Seluruh token warna didefinisikan di `app/globals.css` dan sudah diverifikasi
-lolos WCAG AA (kontras >= 4.5:1 untuk teks).
-
-## Struktur
-
-```
-app/                      Rute (App Router)
-  page.tsx                Beranda
-  umkm/                   Lapak UMKM + halaman detail produk
-  kesehatan/              Kalkulator gizi, grafik tumbuh, jadwal posyandu
-  lingkungan/             Jadwal sampah per RT, panduan pilah, bank sampah
-  profil/                 Sejarah, visi-misi, perangkat, layanan administrasi
-  pengumuman/             Daftar + halaman detail pengumuman
-  globals.css             Token warna, tipografi, motion
-
-components/
-  layout/                 Header, footer, logo
-  shared/                 Section, KonturBg, Reveal, PageHeader
-  home/ umkm/ kesehatan/ lingkungan/ profil/ pengumuman/
-  ui/                     Primitif (Button, Card, Badge, Accordion, Select, Input)
-
-lib/
-  data/                   Seluruh data (dummy, tapi realistis)
-  gizi.ts                 Perhitungan status gizi WHO
-  utils.ts                Format rupiah, tanggal, tautan WhatsApp
-```
-
-## Fitur Utama
-
-**Kalkulator Status Gizi Anak** (`lib/gizi.ts`) — perhitungan sungguhan, bukan
-angka karangan. Memakai metode LMS dari Standar Antropometri Anak WHO
-(Permenkes No. 2 Tahun 2020), menghitung skor Z untuk dua indeks:
-
-- **TB/U** (Tinggi Badan menurut Umur) — menapis perawakan pendek / stunting
-- **BB/U** (Berat Badan menurut Umur) — menapis berat badan kurang
-
-Rumus: `z = ((X/M)^L − 1) / (L·S)`, dengan parameter LMS diinterpolasi linear
-menurut umur. Ambang klasifikasi mengikuti Permenkes. Berlaku untuk usia 0–60
-bulan. Hasil dihitung sepenuhnya di peramban — data anak tidak dikirim ke mana
-pun.
-
-Fitur interaktif lain: penyaring dan pencarian UMKM, pemilih jadwal sampah per
-RT, akordeon syarat layanan administrasi, grafik pertumbuhan dengan pita rujukan
-−2SD sampai +2SD.
-
-## Mengganti Identitas Desa
-
-Seluruh identitas terpusat di `lib/data/desa.ts` — nama desa, kecamatan,
-kabupaten, alamat, kontak, dan nama merek. Ubah di satu tempat itu saja.
-
-## Menyambung ke Basis Data
-
-Semua akses data melewati `lib/data/*`. Untuk beralih ke Supabase atau backend
-lain, cukup ganti isi modul-modul itu tanpa menyentuh komponen.
-
-## Catatan Aksesibilitas
-
-- Kontras teks >= 4.5:1 di seluruh pasangan warna (sudah diverifikasi)
-- Cincin fokus keyboard terlihat pada semua kontrol
-- Target sentuh minimal 44px
-- `prefers-reduced-motion` dihormati
-- Satu `<h1>` per halaman, `lang="id"`, tautan lompat ke konten
-- Tidak ada emoji sebagai ikon
-
----
-
-Situs langsung: https://web-desa-lomba.vercel.app
+## Tautan / Link Deploy Website
+https://web-desa-lomba.vercel.app
