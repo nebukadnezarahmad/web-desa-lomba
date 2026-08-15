@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   ForkKnifeIcon,
   BasketIcon,
@@ -38,19 +39,39 @@ const gaya: Record<
 };
 
 /**
- * Ilustrasi produk dibangkitkan dari kategori, bukan foto stok acak.
- * Konsisten, ringan, dan tidak butuh jaringan. Ganti dengan foto asli
- * pelaku usaha saat data sungguhan tersedia.
+ * Menampilkan foto produk bila tersedia. Kalau belum ada foto yang benar-benar
+ * menggambarkan barangnya, jatuh ke ilustrasi ikon per kategori — lebih baik
+ * ilustrasi yang jujur daripada foto stok yang salah barang.
  */
 export function ProdukThumb({
   kategori,
+  foto,
+  alt,
   ukuran = "kartu",
   className,
 }: {
   kategori: KategoriUmkm;
+  foto?: string;
+  alt?: string;
   ukuran?: "kartu" | "besar";
   className?: string;
 }) {
+  const rasio = ukuran === "kartu" ? "aspect-[4/3]" : "aspect-[16/10]";
+
+  if (foto) {
+    return (
+      <div className={cn("relative overflow-hidden", rasio, className)}>
+        <Image
+          src={`/foto/${foto}`}
+          alt={alt ?? ""}
+          fill
+          sizes={ukuran === "besar" ? "(min-width: 1024px) 60vw, 100vw" : "(min-width: 1024px) 25vw, 50vw"}
+          className="object-cover"
+        />
+      </div>
+    );
+  }
+
   const { ikon: Ikon, latar, warna, kontur } = gaya[kategori];
 
   return (
@@ -59,7 +80,7 @@ export function ProdukThumb({
       className={cn(
         "relative flex items-center justify-center overflow-hidden",
         latar,
-        ukuran === "kartu" ? "aspect-[4/3]" : "aspect-[16/10]",
+        rasio,
         className,
       )}
     >

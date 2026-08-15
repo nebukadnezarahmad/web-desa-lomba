@@ -56,7 +56,12 @@ export default async function HalamanProduk(props: PageProps<"/umkm/[slug]">) {
 
       <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-14">
         <div className="overflow-hidden rounded-[var(--radius-panel)] border border-line">
-          <ProdukThumb kategori={produk.kategori} ukuran="besar" />
+          <ProdukThumb
+            kategori={produk.kategori}
+            foto={produk.foto}
+            alt={`${produk.nama} — ${produk.usaha}`}
+            ukuran="besar"
+          />
         </div>
 
         <div>
@@ -155,7 +160,11 @@ export default async function HalamanProduk(props: PageProps<"/umkm/[slug]">) {
                   href={`/umkm/${p.slug}`}
                   className="group flex h-full flex-col overflow-hidden rounded-[var(--radius-card)] border border-line bg-surface transition-all duration-200 hover:-translate-y-0.5 hover:border-green/40 hover:shadow-lg hover:shadow-green/8"
                 >
-                  <ProdukThumb kategori={p.kategori} />
+                  <ProdukThumb
+                    kategori={p.kategori}
+                    foto={p.foto}
+                    alt={`${p.nama} — ${p.usaha}`}
+                  />
                   <div className="flex flex-1 flex-col p-5">
                     <h3 className="text-[0.9375rem] font-bold text-ink transition-colors group-hover:text-green-strong">
                       {p.nama}

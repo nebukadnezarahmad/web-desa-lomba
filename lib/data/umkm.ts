@@ -14,6 +14,12 @@ export type Produk = {
   dusun: string;
   whatsapp: string;
   unggulan?: boolean;
+  /**
+   * Nama berkas di public/foto. Kosongkan bila belum ada foto yang benar-benar
+   * menggambarkan produknya — ProdukThumb akan memakai ilustrasi kategori.
+   * Lebih baik ilustrasi daripada foto yang salah barang.
+   */
+  foto?: string;
 };
 
 export const produkUmkm: Produk[] = [
@@ -39,6 +45,7 @@ export const produkUmkm: Produk[] = [
   },
   {
     slug: "gula-semut-aren",
+    foto: "gula-semut-aren.jpg",
     nama: "Gula Semut Aren Murni",
     kategori: "Makanan",
     harga: 32000,
@@ -59,6 +66,7 @@ export const produkUmkm: Produk[] = [
   },
   {
     slug: "anyaman-bambu-serbaguna",
+    foto: "anyaman-bambu.jpg",
     nama: "Anyaman Bambu Serbaguna",
     kategori: "Kerajinan",
     harga: 65000,
@@ -115,6 +123,7 @@ export const produkUmkm: Produk[] = [
   },
   {
     slug: "madu-hutan-klanceng",
+    foto: "madu-klanceng.jpg",
     nama: "Madu Klanceng Hutan",
     kategori: "Pertanian",
     harga: 145000,
@@ -153,6 +162,7 @@ export const produkUmkm: Produk[] = [
   },
   {
     slug: "jahit-permak-pakaian",
+    foto: "jahit-permak.jpg",
     nama: "Jahit dan Permak Pakaian",
     kategori: "Jasa",
     harga: 25000,
@@ -190,6 +200,7 @@ export const produkUmkm: Produk[] = [
   },
   {
     slug: "sapu-ijuk-aren",
+    foto: "sapu-ijuk.jpg",
     nama: "Sapu Ijuk Aren",
     kategori: "Kerajinan",
     harga: 45000,
@@ -208,6 +219,8 @@ export const produkUmkm: Produk[] = [
   },
   {
     slug: "kopi-robusta-bubuk",
+    foto: "kopi-robusta.jpg",
+    unggulan: true,
     nama: "Kopi Robusta Bubuk",
     kategori: "Pertanian",
     harga: 38000,
@@ -227,6 +240,7 @@ export const produkUmkm: Produk[] = [
   },
   {
     slug: "catering-hajatan-desa",
+    foto: "katering.jpg",
     nama: "Katering Hajatan dan Rapat",
     kategori: "Jasa",
     harga: 22000,

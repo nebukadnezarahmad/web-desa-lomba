@@ -60,7 +60,6 @@ export default function HalamanProfil() {
               alt="Hamparan sawah berteras dengan barisan pohon kelapa di kejauhan"
               rasio="potret"
               className="mt-6 rounded-[var(--radius-card)]"
-              keterangan="Foto ilustrasi, belum diambil di lokasi desa."
             />
           </div>
           <div className="flex flex-col gap-5">

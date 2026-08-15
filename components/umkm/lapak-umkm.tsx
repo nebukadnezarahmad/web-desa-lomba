@@ -122,7 +122,11 @@ export function LapakUmkm() {
                 href={`/umkm/${p.slug}`}
                 className="group flex h-full flex-col overflow-hidden rounded-[var(--radius-card)] border border-line bg-surface transition-all duration-200 hover:-translate-y-0.5 hover:border-green/40 hover:shadow-lg hover:shadow-green/8"
               >
-                <ProdukThumb kategori={p.kategori} />
+                <ProdukThumb
+                  kategori={p.kategori}
+                  foto={p.foto}
+                  alt={`${p.nama} — ${p.usaha}`}
+                />
                 <div className="flex flex-1 flex-col p-5">
                   <Badge
                     tone={

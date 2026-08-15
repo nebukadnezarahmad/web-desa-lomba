@@ -11,7 +11,9 @@ import { formatRupiah } from "@/lib/utils";
 
 // Produk Bu Marni yang sama disebut di headline beranda — sengaja ditautkan
 // supaya klaim di hero terasa nyata, bukan angan-angan copywriting.
-const sorotan = produkUnggulan.find((p) => p.pemilik.includes("Marni")) ?? produkUnggulan[0];
+/* Utamakan produk unggulan yang sudah punya foto — kartu sorotan ini paling
+   besar di beranda, jadi paling terasa kalau isinya cuma ilustrasi ikon. */
+const sorotan = produkUnggulan.find((p) => p.foto) ?? produkUnggulan[0];
 const lainnya = produkUmkm.filter((p) => p.slug !== sorotan.slug).slice(0, 3);
 
 export function UmkmPreview() {
@@ -45,6 +47,7 @@ export function UmkmPreview() {
             className="group flex h-full flex-col overflow-hidden rounded-[var(--radius-panel)] border border-line bg-surface transition-all duration-200 hover:-translate-y-0.5 hover:border-green/40 hover:shadow-lg hover:shadow-green/8"
           >
             <FotoDesa
+              src={sorotan.foto}
               alt={`${sorotan.nama} — ${sorotan.usaha}`}
               rasio="lanskap"
             />
@@ -77,7 +80,11 @@ export function UmkmPreview() {
               href={`/umkm/${p.slug}`}
               className="group flex h-full flex-col overflow-hidden rounded-[var(--radius-card)] border border-line bg-surface transition-all duration-200 hover:-translate-y-0.5 hover:border-green/40 hover:shadow-lg hover:shadow-green/8"
             >
-              <ProdukThumb kategori={p.kategori} />
+              <ProdukThumb
+                kategori={p.kategori}
+                foto={p.foto}
+                alt={`${p.nama} — ${p.usaha}`}
+              />
               <div className="flex flex-1 flex-col p-5">
                 <Badge
                   tone={
