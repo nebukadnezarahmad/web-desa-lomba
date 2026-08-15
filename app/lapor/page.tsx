@@ -8,7 +8,7 @@ import { FormLaporan } from "@/components/lapor/form-laporan";
 export const metadata: Metadata = {
   title: "Lapor Warga",
   description:
-    "Laporkan jalan rusak, sampah menumpuk, atau masalah lain di lingkungan Desa Jatirandu. Laporan bisa dikirim tanpa nama dan dilacak lewat kode.",
+    "Laporkan jalan rusak, sampah menumpuk, atau masalah lain di lingkungan Desa Tegalrejo. Laporan bisa dikirim tanpa nama dan dilacak lewat kode.",
 };
 
 export default function HalamanLapor() {

@@ -17,7 +17,7 @@ import { posyandu, programKesehatan } from "@/lib/data/posyandu";
 export const metadata: Metadata = {
   title: "Kesehatan & Posyandu",
   description:
-    "Kalkulator status gizi anak berdasarkan Standar Antropometri WHO, jadwal enam posyandu Desa Jatirandu, dan program kesehatan warga.",
+    "Kalkulator status gizi anak berdasarkan Standar Antropometri WHO, jadwal enam posyandu Desa Tegalrejo, dan program kesehatan warga.",
 };
 
 export default function HalamanKesehatan() {

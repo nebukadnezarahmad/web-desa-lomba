@@ -19,7 +19,7 @@ import { formatAngka } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Profil Desa & Layanan",
   description:
-    "Sejarah, visi misi, struktur perangkat, data RT/RW, dan layanan administrasi Desa Jatirandu beserta syarat dan estimasi waktunya.",
+    "Sejarah, visi misi, struktur perangkat, data RT/RW, dan layanan administrasi Desa Tegalrejo beserta syarat dan estimasi waktunya.",
 };
 
 const totalKk = daftarRt.reduce((n, r) => n + r.kk, 0);
@@ -56,7 +56,7 @@ export default function HalamanProfil() {
               Bagaimana desa ini terbentuk
             </h2>
             <FotoDesa
-              alt="Gapura masuk Desa Jatirandu"
+              alt="Gapura masuk Desa Tegalrejo"
               rasio="potret"
               className="mt-6 rounded-[var(--radius-card)]"
             />
@@ -321,7 +321,7 @@ export default function HalamanProfil() {
         <SectionHeading
           kicker="Hubungi Kami"
           tone="blue"
-          judul="Balai Desa Jatirandu"
+          judul="Balai Desa Tegalrejo"
           deskripsi="Datang langsung pada hari kerja, atau hubungi lebih dulu bila ingin memastikan berkas."
         />
 

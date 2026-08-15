@@ -77,14 +77,14 @@ export const produkUmkm: Produk[] = [
   },
   {
     slug: "batik-tulis-motif-padi",
-    nama: "Batik Tulis Motif Padi Jatirandu",
+    nama: "Batik Tulis Motif Padi Tegalrejo",
     kategori: "Kerajinan",
     harga: 285000,
     satuan: "lembar 2 m",
     deskripsi:
       "Batik tulis motif bulir padi dan garis kontur sawah, dikerjakan penuh dengan canting tangan oleh kelompok perajin ibu-ibu desa — bukan cap, bukan printing, satu lembar butuh sekitar sepuluh hari kerja.",
     detail: [
-      "Motif dikembangkan kelompok perajin desa dengan mengambil bentuk bulir padi dan garis kontur persawahan sebagai penanda identitas Jatirandu.",
+      "Motif dikembangkan kelompok perajin desa dengan mengambil bentuk bulir padi dan garis kontur persawahan sebagai penanda identitas Tegalrejo.",
       "Seluruh proses dikerjakan dengan canting tangan di atas kain katun primisima, membutuhkan waktu sekitar sepuluh hari per lembar.",
       "Pewarnaan menggunakan kombinasi pewarna alam dari kulit mahoni dan indigo. Setiap lembar memiliki perbedaan kecil karena dikerjakan manual.",
     ],
@@ -146,7 +146,7 @@ export const produkUmkm: Produk[] = [
       "Menerima panggilan darurat di masa tanam dan panen. Hubungi lewat WhatsApp untuk memastikan ketersediaan jadwal.",
     ],
     pemilik: "Agus Setiawan",
-    usaha: "Bengkel Tani Jatirandu",
+    usaha: "Bengkel Tani Tegalrejo",
     rt: "RT 06",
     dusun: "Sidorejo",
     whatsapp: "081234567807",

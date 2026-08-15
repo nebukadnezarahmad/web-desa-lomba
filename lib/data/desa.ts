@@ -1,25 +1,22 @@
 /**
- * Identitas desa — sumber tunggal.
+ * Identitas desa — sumber tunggal. Ganti di sini untuk rebrand; seluruh
+ * halaman, metadata, dan data contoh ikut menyesuaikan.
  *
- * Kabupaten memakai nama nyata (Sukoharjo, eks-Karesidenan Surakarta)
- * supaya konteks geografisnya terasa berpijak, sesuai masukan bahwa nama
- * karangan generik terasa "buatan AI". Kecamatan dan desa tetap fiktif —
- * "Watubelah" dan "Jatirandu" bukan nama kecamatan/desa yang benar-benar
- * terdaftar di Sukoharjo — supaya prototipe ini tidak menempelkan struktur
- * pemerintahan dan data karangan ke desa yang sungguhan ada. Ganti di sini
- * untuk rebrand.
+ * Catatan: statistik warga, nomor telepon, dan email di bawah masih angka
+ * contoh, belum data resmi. Ganti dengan data sebenarnya sebelum situs ini
+ * dipakai warga.
  */
 export const desa = {
   merek: "Balai",
   tagline: "Satu pintu untuk warga desa.",
-  nama: "Desa Jatirandu",
+  nama: "Desa Tegalrejo",
   kecamatan: "Kecamatan Watubelah",
   kabupaten: "Kabupaten Sukoharjo",
   provinsi: "Jawa Tengah",
   kodePos: "57557",
-  alamatBalai: "Jl. Raya Jatirandu No. 1, Dusun Krajan",
+  alamatBalai: "Jl. Raya Tegalrejo No. 1, Dusun Krajan",
   telepon: "(0271) 555 1240",
-  email: "balaidesa@jatirandu.desa.id",
+  email: "balaidesa@tegalrejo.desa.id",
   jamLayanan: "Senin–Jumat, 08.00–15.00 WIB",
   luasWilayah: "412 hektar",
   jumlahDusun: 5,

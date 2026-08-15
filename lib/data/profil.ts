@@ -171,7 +171,7 @@ export const layananAdministrasi: Layanan[] = [
 ];
 
 export const visiMisi = {
-  visi: "Terwujudnya Desa Jatirandu yang mandiri secara ekonomi, sehat warganya, dan lestari lingkungannya.",
+  visi: "Terwujudnya Desa Tegalrejo yang mandiri secara ekonomi, sehat warganya, dan lestari lingkungannya.",
   misi: [
     "Menguatkan usaha mikro warga melalui pendampingan, pelatihan, dan pembukaan akses pemasaran.",
     "Menurunkan angka perawakan pendek pada balita lewat pemantauan pertumbuhan yang tertib di seluruh posyandu.",
@@ -182,7 +182,7 @@ export const visiMisi = {
 };
 
 export const sejarahDesa = [
-  "Desa Jatirandu terbentuk pada 1946 dari penggabungan tiga permukiman lama di sekitar aliran Sungai Tirto: Krajan, Sidorejo, dan Ngadirejo. Ketiganya sejak lama berbagi jaringan irigasi yang sama, sehingga penggabungan dianggap wajar oleh warga saat itu.",
+  "Desa Tegalrejo terbentuk pada 1946 dari penggabungan tiga permukiman lama di sekitar aliran Sungai Tirto: Krajan, Sidorejo, dan Ngadirejo. Ketiganya sejak lama berbagi jaringan irigasi yang sama, sehingga penggabungan dianggap wajar oleh warga saat itu.",
   "Dusun Tegalsari dan Banjaran bergabung kemudian pada 1968, seiring pembukaan lahan pertanian baru di lereng timur. Sejak itu wilayah desa mencapai bentuknya yang sekarang, seluas 412 hektar dengan lima dusun.",
   "Pertanian padi dan aren tetap menjadi tumpuan utama. Sejak awal 2010-an, kelompok perempuan desa mulai mengolah hasil pertanian menjadi produk kemasan, yang tumbuh menjadi puluhan usaha mikro yang kini terdaftar di lapak UMKM desa.",
 ];

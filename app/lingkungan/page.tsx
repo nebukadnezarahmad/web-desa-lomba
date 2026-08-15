@@ -20,7 +20,7 @@ import { cn, formatAngka } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Lingkungan & Persampahan",
   description:
-    "Jadwal angkut sampah per RT, panduan memilah sampah rumah tangga, statistik bank sampah, dan program penghijauan Desa Jatirandu.",
+    "Jadwal angkut sampah per RT, panduan memilah sampah rumah tangga, statistik bank sampah, dan program penghijauan Desa Tegalrejo.",
 };
 
 const warnaPilah = {
@@ -46,7 +46,7 @@ export default function HalamanLingkungan() {
     <>
       <PageHeader
         kicker="Lingkungan Desa"
-        judul="Sampah yang terpilah, desa yang terawat"
+        judul="Yuk, jaga kelestarian lingkungan bersama"
         deskripsi="Pengelolaan sampah dimulai dari dapur masing-masing rumah. Halaman ini memuat jadwal angkut tiap RT, cara memilah yang benar, dan hasil kerja bank sampah desa sejauh ini."
       />
 

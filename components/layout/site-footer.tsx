@@ -24,10 +24,6 @@ export function SiteFooter() {
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
             <Logo />
-            <p className="mt-5 max-w-sm text-[0.9375rem] leading-relaxed text-ink-muted">
-              {desa.tagline} Pengumuman, lapak UMKM warga, layanan kesehatan,
-              dan pengelolaan lingkungan dalam satu tempat.
-            </p>
             <ul className="mt-6 flex flex-col gap-3 text-[0.9375rem] text-ink-muted">
               <li className="flex gap-3">
                 <MapPinIcon
@@ -104,14 +100,10 @@ export function SiteFooter() {
           </nav>
         </div>
 
-        <div className="mt-12 flex flex-col gap-3 border-t border-line pt-7 text-sm text-ink-faint sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-12 border-t border-line pt-7 text-sm text-ink-faint">
           <p>
             &copy; {new Date().getFullYear()} Pemerintah {desa.nama},{" "}
             {desa.kabupaten}.
-          </p>
-          <p>
-            Prototipe purwarupa — nama desa, warga, dan data di dalamnya bersifat
-            fiktif.
           </p>
         </div>
       </div>

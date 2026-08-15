@@ -6,7 +6,7 @@ import { DaftarPengumuman } from "@/components/pengumuman/daftar-pengumuman";
 export const metadata: Metadata = {
   title: "Pengumuman Desa",
   description:
-    "Seluruh pengumuman resmi Desa Jatirandu, dari urusan administrasi, kesehatan, lingkungan, ekonomi, hingga kegiatan warga.",
+    "Seluruh pengumuman resmi Desa Tegalrejo, dari urusan administrasi, kesehatan, lingkungan, ekonomi, hingga kegiatan warga.",
 };
 
 export default function HalamanPengumuman() {
@@ -16,7 +16,7 @@ export default function HalamanPengumuman() {
         kicker="Kabar Resmi"
         tone="blue"
         judul="Pengumuman desa"
-        deskripsi="Semua pemberitahuan resmi dari pemerintah Desa Jatirandu, diurutkan dari yang paling baru. Saring menurut kategori untuk menemukan yang Anda cari."
+        deskripsi="Semua pemberitahuan resmi dari pemerintah Desa Tegalrejo, diurutkan dari yang paling baru. Saring menurut kategori untuk menemukan yang Anda cari."
       />
       <Section latar="putih">
         <DaftarPengumuman />
